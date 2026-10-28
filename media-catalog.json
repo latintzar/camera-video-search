@@ -1,0 +1,47 @@
+{
+  "generated": "2026-10-28T17:16:26.156732+00:00",
+  "items": [
+    {
+      "file": "docs/images/original-illustration.webp",
+      "type": "image",
+      "project": "video-operations",
+      "desc": "Original generated launch painting: seven business papers and three overhead factory camera views connected by burgundy string on a cream pinboard.",
+      "alt": "Original product illustration connecting camera views and business records.",
+      "tags": [
+        "original launch artwork",
+        "generated illustration",
+        "connected evidence"
+      ],
+      "provenance": "provenance/marketing-assets.json"
+    },
+    {
+      "file": "examples/synthetic-shop.mp4",
+      "type": "video",
+      "project": "video-operations",
+      "duration": 12,
+      "desc": "Programmatically authored overhead shop fixture. A blue labelled visitor approaches a shelf, holds an orange example item and walks toward checkout.",
+      "text_overlays": [
+        "Synthetic shop \u00b7 authored annotations",
+        "Programmatic fixture \u00b7 supplied labels \u00b7 MIT"
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "end": 3,
+          "desc": "Synthetic labelled figure approaches the drawn shelf."
+        },
+        {
+          "start": 3,
+          "end": 8,
+          "desc": "Supplied touch, pickup and return labels cover the drawn example item."
+        },
+        {
+          "start": 8,
+          "end": 12,
+          "desc": "Synthetic figure moves toward the drawn checkout."
+        }
+      ],
+      "provenance": "examples/media-provenance.json"
+    }
+  ]
+}

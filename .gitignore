@@ -1,0 +1,14 @@
+.git/
+.venv/
+.local/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.sqlite*
+*.db*
+.env
+.env.*
+!.env.example
+**/dist-preview/
+node_modules/
+*.tar.gz

@@ -1,0 +1,12 @@
+{
+  "original_repository": "https://github.com/Rocoto-Labs/rocoto-site",
+  "source_commit": "5687dd18092316a8f66758f8e6c0dbd7fd49540d",
+  "source_path": "video/assets/hero-pinboard.webp",
+  "source_git_blob": "80653dfd3d51d193e1d5381b4302dddfb7ad80bf",
+  "sha256": "9b0a757243857734d4ab44f14ec166042f4e1bb9f7ea71393d9c6e7c2580d0dd",
+  "generation_manifest": "video/assets/REDESIGN-2026-10-04.json",
+  "manifest_hash_matches": true,
+  "source_disclosure": "AI-generated artwork and illustrative CCTV scenes. The people and businesses are fictional; images are not customer footage or actual product detections.",
+  "viewed": true,
+  "used_as": "Original illustrative launch artwork, separate from native interface/model evidence"
+}

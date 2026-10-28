@@ -1,0 +1,9 @@
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Exact content digests in generated source provenance"
+condition = "AND"
+paths = ['''(^|/)provenance/(file-sha256|framework-file-sha256|source-export|source-changes|historical-trials)\.json$''']
+regexTarget = "line"
+regexes = [''':\s*"[a-f0-9]{64}"[,]?\s*$''']

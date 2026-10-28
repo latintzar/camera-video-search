@@ -1,0 +1,11 @@
+{
+  "runtime": "native retail source through tools/dev.py",
+  "binding": "loopback only",
+  "state": "new recipient-owned private fixture workspace outside source",
+  "backend_outbound_attempts": 0,
+  "provider_calls": 0,
+  "browser": "browser-proof.json",
+  "native_playback_seconds": 12,
+  "annotations": 3,
+  "scope": "authored synthetic recording; models/GPU and live acquisition separate"
+}

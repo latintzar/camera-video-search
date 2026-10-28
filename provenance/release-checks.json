@@ -1,0 +1,91 @@
+{
+  "checked_at": "2026-10-28T17:16:26.156732+00:00",
+  "state": "private review candidate",
+  "original_source_mutated": false,
+  "history_included": false,
+  "fresh_cpu_install": {
+    "python": "Python 3.12.3",
+    "requirements": "requirements-lock.txt",
+    "package_count": 49,
+    "pip_check": "passed",
+    "torch_installed": false,
+    "model_weights_downloaded": false
+  },
+  "offline_checks": {
+    "external_network": "blocked",
+    "provider_service_clis": "blocked",
+    "suites": [
+      {
+        "suite": "starter",
+        "returncode": 0,
+        "seconds": 1.69,
+        "summary": [
+          "8 passed in 1.16s"
+        ]
+      },
+      {
+        "suite": "source-pipeline",
+        "returncode": 0,
+        "seconds": 74.36,
+        "summary": [
+          "164 passed, 1 warning in 73.24s (0:01:13)"
+        ]
+      },
+      {
+        "suite": "retrieval-budget",
+        "returncode": 0,
+        "seconds": 2.96,
+        "summary": [
+          "77 passed, 1 skipped, 28 subtests passed in 2.59s"
+        ]
+      },
+      {
+        "suite": "events-player",
+        "returncode": 0,
+        "seconds": 28.57,
+        "summary": [
+          "70 passed, 1 warning in 27.69s"
+        ]
+      }
+    ],
+    "final_compute_guard_and_starter_regression": {
+      "summary": "19 passed, 22 subtests passed in 1.29s",
+      "returncode": 0
+    }
+  },
+  "unique_pytest_cases_passed": 319,
+  "subtests_passed": 28,
+  "optional_skips": 1,
+  "native_first_result": {
+    "owned_state": "outside checkout",
+    "source": "authored synthetic recording and supplied annotations",
+    "admitted_annotations": 3,
+    "trackers": 9,
+    "playback_duration_seconds": 12,
+    "restart_and_repeat": "passed through owned source seed and persisted records",
+    "provider_calls": 0,
+    "blocked_outbound_attempts": 0
+  },
+  "browser": "provenance/browser-proof.json",
+  "reference": {
+    "named_definitions": 5973,
+    "routes": 242
+  },
+  "provider_configuration": {
+    "historical_modal_workspace_default": "removed; explicit recipient configuration",
+    "empty_workspace_admission": "denied before approval read",
+    "qdrant": "independent project, volume and loopback16334",
+    "historical_source_credit": "fixture-specific metadata instead of a fixed Cosmos/Intel label"
+  },
+  "separate_acceptance": [
+    "GPU/provider execution and semantic business-event quality",
+    "Live camera acquisition and arbitrary-camera calibration",
+    "Fresh Docker/Qdrant service and source/executor brokers",
+    "Complete maintained PostgreSQL reader/playback service",
+    "Managed hosted-agent execution and external messaging/POS"
+  ],
+  "source_scan": "provenance/secret-scan-summary.json",
+  "agent_skill": "quick_validate.py passed",
+  "javascript_syntax": "node --check passed for modified native scripts",
+  "new_guide_links": "all relative targets exist"
+}

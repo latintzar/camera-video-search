@@ -1,0 +1,4 @@
+-r requirements-cpu.txt
+pytest==9.2.0
+pytest-asyncio==1.4.1
+opencv-python-headless>=4.10,<5

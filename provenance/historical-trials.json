@@ -1,0 +1,68 @@
+{
+  "reviewed_on": "2026-10-28",
+  "upstream_repository": "https://github.com/Rocoto-Labs/vitrina-harness",
+  "upstream_commit": "5e6c283c0ac3592750c47a5d6d1e9b9d7222a4cf",
+  "scope": "Curated technical measurements from retained trials; private accounts, source footage and raw model answers excluded.",
+  "records": [
+    {
+      "retained_record": "harness/records/2026-10-04-experiment.md",
+      "sha256": "934c185b1ace62cb0f20cdc356190d148c6c5581adf2dff5ecfdfec06749895f",
+      "raw_record_in_release": false
+    },
+    {
+      "retained_record": "harness/records/2026-10-09-retirement/SOURCE-EMBEDDING.md",
+      "sha256": "20fb1fc8a32b39492f35b4a806c2246ca39a7a5d0e1cef38b92b71d50d95bee5",
+      "raw_record_in_release": false
+    },
+    {
+      "retained_record": "harness/records/2026-10-09-retirement/QDRANT.md",
+      "sha256": "672760b4f7dd0b16ce3597fa7c7a7334ffb9af522a343e05bba34b6fddf7a0dc",
+      "raw_record_in_release": false
+    },
+    {
+      "retained_record": "harness/records/2026-10-09-gpu-commissioning.md",
+      "sha256": "229a2af9f494aac804d609d8fec77c11891530aa8def7fbe141c77a28f350681",
+      "raw_record_in_release": false
+    },
+    {
+      "retained_record": "harness/records/2026-10-11-consolidation/RETAILACTION-IMPORT.md",
+      "sha256": "8dd7483289793b65b9c8e67630dd0ae265851c731f6c83a2149cb2dfd9ebdec1",
+      "raw_record_in_release": false
+    },
+    {
+      "retained_record": "harness/records/2026-10-11-consolidation/CUSTOM-ADAPTERS.md",
+      "sha256": "796a315bef204e484a65d66f9c75bade435ad8cf4d1a150411624bd14e2305ef",
+      "raw_record_in_release": false
+    }
+  ],
+  "embedding": {
+    "model": "nvidia/Cosmos-Embed1-224p",
+    "revision": "787e0b996f5260a71ad474a283c90539a2e12986",
+    "gpu": "H100",
+    "dimension": 256,
+    "sampled_frames": 8,
+    "assets": 51,
+    "windows": 176,
+    "camera_minutes": 21.82,
+    "cpu_gpu_text_cosine": 0.999978
+  },
+  "retrieval": {
+    "development_queries": 12,
+    "top_k": 6,
+    "qdrant_lookup_median_ms_range": [
+      1.523,
+      4.758
+    ],
+    "semantic_accuracy_measured": false
+  },
+  "inspection": {
+    "separate_gpu": "B200",
+    "cosmos3_super_revision": "f543c56225b2e04d0ad141e29655be3a45d9c455",
+    "quality": "Retained semantic errors require separate qualification."
+  },
+  "retailaction": {
+    "admitted_observations": 0,
+    "prior_candidates_quarantined": 17
+  },
+  "current_provider_or_gpu_runs": 0
+}

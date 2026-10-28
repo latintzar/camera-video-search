@@ -1,0 +1,17 @@
+{
+  "author": "Peter Neyra",
+  "licence": "MIT",
+  "basis": "programmatically authored scene and supplied labels",
+  "generator": "tools/render-fixture.py",
+  "model_calls": 0,
+  "customer_footage": false,
+  "width": 640,
+  "height": 360,
+  "fps": 10,
+  "duration_seconds": 12,
+  "assets": {
+    "synthetic-shop.mp4": "8c5c60ec6982d855057f7c2ea22a646eda5467fa2ce75d44708c66e50a13d62b",
+    "synthetic-shop.jpg": "84fb1d38bbb0ef3db85134011d0a1282d09f8196891453e42d20b50718601925",
+    "annotations.json": "bfb988980ea1eb57869e97872ece599a11abe79b9d5a3edbea95fff5c879986e"
+  }
+}

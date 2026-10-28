@@ -1,0 +1,9 @@
+{
+  "source": "agent-workspace private reviewed derivative",
+  "upstream_repository": "https://github.com/Rocoto-Labs/vitrina-harness",
+  "upstream_commit": "5e6c283c0ac3592750c47a5d6d1e9b9d7222a4cf",
+  "copied_files": 942,
+  "originals_changed": false,
+  "history_included": false,
+  "new_derivative": "video-operations"
+}
