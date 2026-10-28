@@ -99,8 +99,9 @@
  const located=place=>place&&typeof place==='object'&&finite(place.latitude)&&finite(place.longitude)&&Math.abs(place.latitude)<=90&&Math.abs(place.longitude)<=180;
  const routeFor=(base,place,extra)=>{const query=new URLSearchParams(extra||{});if(place?.location_id)query.set('location_id',place.location_id);const text=query.toString();return text?`${base}?${text}`:base;};
 
- function create({host,onLocation,place:configured}={}){
+ function create({host,onLocation,place:configured,enabled=true}={}){
   if(!host)return inert();
+  if(!enabled){host.hidden=true;return inert();}
   // The chip stands for a location that holds coordinates; the server reads them from its own stores.
   if(!located(configured)){host.hidden=true;return inert();}
   const place={...configured};

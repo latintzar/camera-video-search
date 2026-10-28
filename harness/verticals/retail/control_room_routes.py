@@ -148,7 +148,8 @@ def register_control_room_routes(app):
             from playback_media import maintained_bootstrap
             return await maintained_bootstrap(request)
         return JSONResponse({'schema': 'rocoto.player-bootstrap.v1',
-                             'read_authority': 'legacy', 'sources': []},
+                             'read_authority': 'legacy', 'sources': [],
+                             'capabilities': {'location_context': app.state.location_context.enabled}},
                             headers={'Cache-Control': 'private, no-store'})
 
     @app.get('/api/retail/viewer')

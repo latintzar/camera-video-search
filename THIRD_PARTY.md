@@ -20,3 +20,7 @@ Source recordings, imported third-party camera datasets, benchmark outputs, reta
 ## Video release additions
 
 The included synthetic recording, poster and supplied annotations are authored project fixtures under MIT. The retained original launch illustration has its own generation/source provenance in `provenance/marketing-assets.json`. Cosmos checkpoints and external GPU/model services keep their own upstream terms and recipient setup; they are separate from the CPU starter.
+
+## Downloadable processed retail sample
+
+The optional startup download includes Standard Cognition RetailAction material under the Standard.AI Dataset License, and Intel Video Summarization For Retail material curated by Parker Lischwe under CC BY-SA 4.0. The data release contains complete licences and NOTICE. Original adapter code and generated business history use MIT. See [Sample guide](docs/processed-sample.md) and [pinned release descriptor](examples/processed-retail.json).

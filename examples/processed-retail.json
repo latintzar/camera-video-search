@@ -1,0 +1,13 @@
+{
+  "id": "processed-retail-2026-10-09",
+  "url": "https://github.com/latintzar/camera-video-search/releases/download/processed-retail-2026-10-09/processed-retail-2026-10-09.tar.gz",
+  "bytes": 118525150,
+  "sha256": "20964bd9a8f1409a70fc76c8f2abe80b299d5d69b1d39f609cf146c27770ad08",
+  "file_manifest_sha256": "495043b2c20d3669575da0510ed96e317f25de08f7b32918e2ce90792e2ebc78",
+  "recordings": 45,
+  "licences": [
+    "Standard.AI Dataset License",
+    "CC-BY-SA-4.0",
+    "MIT for original adapters and generated business history"
+  ]
+}

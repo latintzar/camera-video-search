@@ -14,11 +14,11 @@ make install
 make dev
 ```
 
-The server binds to `127.0.0.1:18530`. Use the one-use code saved in `~/.local/state/video-operations/owner-code.txt`.
+The server binds to `127.0.0.1:18530`. Open `http://127.0.0.1:18530/control-room/#clip=retailaction-000027-rank0`. Use the one-use code saved in `~/.local/state/camera-video-search/owner-code.txt`.
 
-The included twelve-second video depicts a synthetic shop and one labelled visitor. Three supplied annotations describe touching, picking up and returning an example item. The existing source/clock/identity admission code saves those records, and the original processors publish nine tracker outputs. The example's one visitor and three interactions are fixture values.
+The first start downloads the checksummed retained retail sample: 45 recordings, original person tracks, archived model answers, dataset references and the saved business history. The backend imports that sample into your own private stores. [Sample contents and licences](processed-sample.md).
 
-From Home, open a tracker to inspect its history. Choose **View footage** to open the native player, select the visitor and seek through its chapters. The player identifies its model layer as **Authored annotations**.
+On Home, choose **Annual** to see the saved historical period. Open a tracker to inspect its history, then choose **View footage**. The native player provides camera selection, visitor chapters, playback speed, camera-view paths and distinct **Cosmos 8B** and **Dataset annotations · evaluation reference** layers.
 
 The starter uses the original SQLite reader and local workspace stores. It clears ambient provider configuration and blocks outside networking. A different private state path is available:
 
@@ -28,12 +28,12 @@ The starter uses the original SQLite reader and local workspace stores. It clear
 
 ## State and restart
 
-The state directory contains access hashes, workspace membership, source/profile/observation records, tracker outputs and the source-scoped media bundle. A product marker protects unrelated directories. Repeating the seed retains the recording identity and observation keys; each run issues a new private access code.
+The state directory contains access hashes, workspace membership, source/profile/observation records, tracker outputs and the source-scoped media bundle. A product marker protects unrelated directories. Repeating the start retains the imported recording identities and saved records; each run issues a new private access code.
 
-Stop with Ctrl+C and run the same command to reopen the saved workspace. The original business processors compute from saved observations. Their output and the underlying recording survive a process restart.
+Stop with Ctrl+C and run the same command to reopen the saved workspace. The original backend reads the saved observations. Their output and the underlying recordings survive a process restart. The starter keeps background processing off so the retained sample stays reproducible.
 
 ## Optional source work
 
-`tools/render-fixture.py` regenerates the included owned media with Pillow and FFmpeg. Its recipe and hashes live in `examples/`. The provider paths are documented separately in [Setup](video-setup.md). For an offline source check, run `make test`.
+`tools/render-fixture.py` regenerates the separate small protocol-test recording with Pillow and FFmpeg. Its recipe and hashes live in `examples/`. The provider paths are documented separately in [Setup](video-setup.md). For an offline source check, run `make test`.
 
 [made by atelier neyra](https://atelierneyra.com)

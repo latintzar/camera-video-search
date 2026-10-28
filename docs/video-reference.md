@@ -169,10 +169,10 @@ Named Python definitions and JavaScript function declarations. Arguments list na
 | POST | `/pages/retail/catalog-upload/{environment}` | [mobile_upload](../harness/verticals/retail/catalog_setup_routes.py#L96) |
 | GET | `/api/catalog/inspections/{inspection_id}/image` | [item_image](../harness/verticals/retail/control_room_routes.py#L127) |
 | GET | `/api/retail/viewer/bootstrap` | [bootstrap](../harness/verticals/retail/control_room_routes.py#L145) |
-| GET | `/api/retail/viewer` | [control_room_status](../harness/verticals/retail/control_room_routes.py#L155) |
-| GET | `/api/tiles/revision` | [control_room_revision](../harness/verticals/retail/control_room_routes.py#L170) |
-| GET | `/control-room/` | [control_room_asset](../harness/verticals/retail/control_room_routes.py#L206) |
-| GET | `/control-room/{asset:path}` | [control_room_asset](../harness/verticals/retail/control_room_routes.py#L206) |
+| GET | `/api/retail/viewer` | [control_room_status](../harness/verticals/retail/control_room_routes.py#L156) |
+| GET | `/api/tiles/revision` | [control_room_revision](../harness/verticals/retail/control_room_routes.py#L171) |
+| GET | `/control-room/` | [control_room_asset](../harness/verticals/retail/control_room_routes.py#L207) |
+| GET | `/control-room/{asset:path}` | [control_room_asset](../harness/verticals/retail/control_room_routes.py#L207) |
 | GET | `/api/retail/source-links` | [listing](../harness/verticals/retail/link_routes.py#L71) |
 | POST | `/api/retail/source-links` | [create](../harness/verticals/retail/link_routes.py#L83) |
 | GET | `/api/retail/source-links/{identity}` | [detail](../harness/verticals/retail/link_routes.py#L96) |
@@ -4452,9 +4452,9 @@ Values belong in recipient-owned private runtime configuration.
 | [item_image](../harness/verticals/retail/control_room_routes.py#L127) | request, inspection_id |  |
 | [allowed](../harness/verticals/retail/control_room_routes.py#L131) |  |  |
 | [bootstrap](../harness/verticals/retail/control_room_routes.py#L145) | request |  |
-| [control_room_status](../harness/verticals/retail/control_room_routes.py#L155) | request |  |
-| [control_room_revision](../harness/verticals/retail/control_room_routes.py#L170) | request | What an open page polls: the revision of its published data, for this session's owner. |
-| [control_room_asset](../harness/verticals/retail/control_room_routes.py#L206) | request, asset |  |
+| [control_room_status](../harness/verticals/retail/control_room_routes.py#L156) | request |  |
+| [control_room_revision](../harness/verticals/retail/control_room_routes.py#L171) | request | What an open page polls: the revision of its published data, for this session's owner. |
+| [control_room_asset](../harness/verticals/retail/control_room_routes.py#L207) | request, asset |  |
 
 ### harness/verticals/retail/control_room_static.py
 
@@ -6741,16 +6741,16 @@ Values belong in recipient-owned private runtime configuration.
 | [cancelOverlayFrame](../harness/verticals/retail/web/control-room/app.js#L499) |  |  |
 | [syncExpandedPlayer](../harness/verticals/retail/web/control-room/app.js#L512) |  |  |
 | [loadPlayer](../harness/verticals/retail/web/control-room/app.js#L516) |  |  |
-| [icon](../harness/verticals/retail/web/control-room/app.js#L531) | name |  |
-| [motionGroups](../harness/verticals/retail/web/control-room/app.js#L547) | tr, t |  |
-| [renderDurationTimeline](../harness/verticals/retail/web/control-room/app.js#L555) |  |  |
-| [updatePlayerUI](../harness/verticals/retail/web/control-room/app.js#L564) | t |  |
-| [previewSeek](../harness/verticals/retail/web/control-room/app.js#L571) | t, x |  |
-| [resumePlayback](../harness/verticals/retail/web/control-room/app.js#L576) |  |  |
-| [togglePlay](../harness/verticals/retail/web/control-room/app.js#L577) |  |  |
-| [flash](../harness/verticals/retail/web/control-room/app.js#L578) | message |  |
-| [revealControls](../harness/verticals/retail/web/control-room/app.js#L580) |  |  |
-| [initWatchUI](../harness/verticals/retail/web/control-room/app.js#L581) |  |  |
+| [icon](../harness/verticals/retail/web/control-room/app.js#L533) | name |  |
+| [motionGroups](../harness/verticals/retail/web/control-room/app.js#L549) | tr, t |  |
+| [renderDurationTimeline](../harness/verticals/retail/web/control-room/app.js#L557) |  |  |
+| [updatePlayerUI](../harness/verticals/retail/web/control-room/app.js#L566) | t |  |
+| [previewSeek](../harness/verticals/retail/web/control-room/app.js#L573) | t, x |  |
+| [resumePlayback](../harness/verticals/retail/web/control-room/app.js#L578) |  |  |
+| [togglePlay](../harness/verticals/retail/web/control-room/app.js#L579) |  |  |
+| [flash](../harness/verticals/retail/web/control-room/app.js#L580) | message |  |
+| [revealControls](../harness/verticals/retail/web/control-room/app.js#L582) |  |  |
+| [initWatchUI](../harness/verticals/retail/web/control-room/app.js#L583) |  |  |
 
 ### harness/verticals/retail/web/control-room/control-room.js
 
@@ -6867,41 +6867,41 @@ Values belong in recipient-owned private runtime configuration.
 | Function | Arguments | Source description |
 | --- | --- | --- |
 | [create](../harness/verticals/retail/web/control-room/location-view.js#L18) | options |  |
-| [listen](../harness/verticals/retail/web/control-room/location-view.js#L58) | element, type, handler, opts |  |
-| [renderPlace](../harness/verticals/retail/web/control-room/location-view.js#L61) |  |  |
-| [renderFootage](../harness/verticals/retail/web/control-room/location-view.js#L74) |  |  |
-| [release](../harness/verticals/retail/web/control-room/location-view.js#L83) |  |  |
-| [play](../harness/verticals/retail/web/control-room/location-view.js#L85) |  |  |
-| [rest](../harness/verticals/retail/web/control-room/location-view.js#L86) |  |  |
-| [nextRecording](../harness/verticals/retail/web/control-room/location-view.js#L87) |  |  |
-| [traceOf](../harness/verticals/retail/web/control-room/location-view.js#L90) | recording |  |
-| [clearTags](../harness/verticals/retail/web/control-room/location-view.js#L96) |  |  |
-| [drawTags](../harness/verticals/retail/web/control-room/location-view.js#L98) |  |  |
-| [tagLoop](../harness/verticals/retail/web/control-room/location-view.js#L119) |  |  |
-| [drawMark](../harness/verticals/retail/web/control-room/location-view.js#L125) | node, tile |  |
-| [tileNode](../harness/verticals/retail/web/control-room/location-view.js#L145) | tile |  |
-| [paintTile](../harness/verticals/retail/web/control-room/location-view.js#L151) | node, tile, fresh |  |
-| [fitUnit](../harness/verticals/retail/web/control-room/location-view.js#L170) | node, tile |  |
-| [tick](../harness/verticals/retail/web/control-room/location-view.js#L177) | node |  |
-| [renderTiles](../harness/verticals/retail/web/control-room/location-view.js#L181) |  |  |
-| [stampOf](../harness/verticals/retail/web/control-room/location-view.js#L209) | tile |  |
-| [newTracker](../harness/verticals/retail/web/control-room/location-view.js#L210) |  |  |
-| [open](../harness/verticals/retail/web/control-room/location-view.js#L215) | key, node |  |
-| [openTile](../harness/verticals/retail/web/control-room/location-view.js#L235) | tile |  |
-| [renderProducts](../harness/verticals/retail/web/control-room/location-view.js#L246) |  |  |
-| [stopPreviews](../harness/verticals/retail/web/control-room/location-view.js#L256) |  |  |
-| [clearPreviews](../harness/verticals/retail/web/control-room/location-view.js#L257) |  |  |
-| [bindPreview](../harness/verticals/retail/web/control-room/location-view.js#L260) | row, video, event, start, end |  |
-| [openProduct](../harness/verticals/retail/web/control-room/location-view.js#L301) | product |  |
-| [renderNeighbourhood](../harness/verticals/retail/web/control-room/location-view.js#L314) |  |  |
-| [catalogLocationParams](../harness/verticals/retail/web/control-room/location-view.js#L324) |  |  |
-| [catalogMethodButton](../harness/verticals/retail/web/control-room/location-view.js#L325) | method |  |
-| [openCatalogSetup](../harness/verticals/retail/web/control-room/location-view.js#L326) |  |  |
-| [requestCatalogMethod](../harness/verticals/retail/web/control-room/location-view.js#L331) | method, setup |  |
-| [renderCatalogImport](../harness/verticals/retail/web/control-room/location-view.js#L337) |  |  |
-| [createPhotoHandoff](../harness/verticals/retail/web/control-room/location-view.js#L340) |  |  |
-| [loadAgents](../harness/verticals/retail/web/control-room/location-view.js#L345) |  |  |
-| [render](../harness/verticals/retail/web/control-room/location-view.js#L353) |  |  |
+| [listen](../harness/verticals/retail/web/control-room/location-view.js#L59) | element, type, handler, opts |  |
+| [renderPlace](../harness/verticals/retail/web/control-room/location-view.js#L62) |  |  |
+| [renderFootage](../harness/verticals/retail/web/control-room/location-view.js#L75) |  |  |
+| [release](../harness/verticals/retail/web/control-room/location-view.js#L84) |  |  |
+| [play](../harness/verticals/retail/web/control-room/location-view.js#L86) |  |  |
+| [rest](../harness/verticals/retail/web/control-room/location-view.js#L87) |  |  |
+| [nextRecording](../harness/verticals/retail/web/control-room/location-view.js#L88) |  |  |
+| [traceOf](../harness/verticals/retail/web/control-room/location-view.js#L91) | recording |  |
+| [clearTags](../harness/verticals/retail/web/control-room/location-view.js#L97) |  |  |
+| [drawTags](../harness/verticals/retail/web/control-room/location-view.js#L99) |  |  |
+| [tagLoop](../harness/verticals/retail/web/control-room/location-view.js#L120) |  |  |
+| [drawMark](../harness/verticals/retail/web/control-room/location-view.js#L126) | node, tile |  |
+| [tileNode](../harness/verticals/retail/web/control-room/location-view.js#L146) | tile |  |
+| [paintTile](../harness/verticals/retail/web/control-room/location-view.js#L152) | node, tile, fresh |  |
+| [fitUnit](../harness/verticals/retail/web/control-room/location-view.js#L171) | node, tile |  |
+| [tick](../harness/verticals/retail/web/control-room/location-view.js#L178) | node |  |
+| [renderTiles](../harness/verticals/retail/web/control-room/location-view.js#L182) |  |  |
+| [stampOf](../harness/verticals/retail/web/control-room/location-view.js#L210) | tile |  |
+| [newTracker](../harness/verticals/retail/web/control-room/location-view.js#L211) |  |  |
+| [open](../harness/verticals/retail/web/control-room/location-view.js#L216) | key, node |  |
+| [openTile](../harness/verticals/retail/web/control-room/location-view.js#L236) | tile |  |
+| [renderProducts](../harness/verticals/retail/web/control-room/location-view.js#L247) |  |  |
+| [stopPreviews](../harness/verticals/retail/web/control-room/location-view.js#L257) |  |  |
+| [clearPreviews](../harness/verticals/retail/web/control-room/location-view.js#L258) |  |  |
+| [bindPreview](../harness/verticals/retail/web/control-room/location-view.js#L261) | row, video, event, start, end |  |
+| [openProduct](../harness/verticals/retail/web/control-room/location-view.js#L302) | product |  |
+| [renderNeighbourhood](../harness/verticals/retail/web/control-room/location-view.js#L315) |  |  |
+| [catalogLocationParams](../harness/verticals/retail/web/control-room/location-view.js#L325) |  |  |
+| [catalogMethodButton](../harness/verticals/retail/web/control-room/location-view.js#L326) | method |  |
+| [openCatalogSetup](../harness/verticals/retail/web/control-room/location-view.js#L327) |  |  |
+| [requestCatalogMethod](../harness/verticals/retail/web/control-room/location-view.js#L332) | method, setup |  |
+| [renderCatalogImport](../harness/verticals/retail/web/control-room/location-view.js#L338) |  |  |
+| [createPhotoHandoff](../harness/verticals/retail/web/control-room/location-view.js#L341) |  |  |
+| [loadAgents](../harness/verticals/retail/web/control-room/location-view.js#L346) |  |  |
+| [render](../harness/verticals/retail/web/control-room/location-view.js#L354) |  |  |
 
 ### harness/verticals/retail/web/control-room/maintained-player.js
 
@@ -7019,23 +7019,23 @@ Values belong in recipient-owned private runtime configuration.
 | [layout](../harness/verticals/retail/web/control-room/weather-widget.js#L78) | values, {width, height, top, bottom, left, right} |  |
 | [lineMark](../harness/verticals/retail/web/control-room/weather-widget.js#L85) | values, box, {dots=false}={} |  |
 | [ghostMark](../harness/verticals/retail/web/control-room/weather-widget.js#L93) | box, stretch |  |
-| [create](../harness/verticals/retail/web/control-room/weather-widget.js#L102) | {host, onLocation, place:configured}={} |  |
-| [drawChip](../harness/verticals/retail/web/control-room/weather-widget.js#L115) |  |  |
-| [daily](../harness/verticals/retail/web/control-room/weather-widget.js#L137) | today |  |
-| [figure](../harness/verticals/retail/web/control-room/weather-widget.js#L143) | now, full |  |
-| [drawPreview](../harness/verticals/retail/web/control-room/weather-widget.js#L147) |  |  |
-| [hidePreview](../harness/verticals/retail/web/control-room/weather-widget.js#L159) |  |  |
-| [showPreview](../harness/verticals/retail/web/control-room/weather-widget.js#L160) |  |  |
-| [hoursHtml](../harness/verticals/retail/web/control-room/weather-widget.js#L165) |  |  |
-| [daysHtml](../harness/verticals/retail/web/control-room/weather-widget.js#L176) |  |  |
-| [drawSheet](../harness/verticals/retail/web/control-room/weather-widget.js#L183) | force |  |
-| [buildSheet](../harness/verticals/retail/web/control-room/weather-widget.js#L221) |  |  |
-| [open](../harness/verticals/retail/web/control-room/weather-widget.js#L229) |  |  |
-| [close](../harness/verticals/retail/web/control-room/weather-widget.js#L243) |  |  |
-| [draw](../harness/verticals/retail/web/control-room/weather-widget.js#L252) |  |  |
-| [refresh](../harness/verticals/retail/web/control-room/weather-widget.js#L253) | visible |  |
-| [mountMap](../harness/verticals/retail/web/control-room/weather-widget.js#L270) |  |  |
-| [map](../harness/verticals/retail/web/control-room/weather-widget.js#L305) | el, opts={} |  |
+| [create](../harness/verticals/retail/web/control-room/weather-widget.js#L102) | {host, onLocation, place:configured, enabled=true}={} |  |
+| [drawChip](../harness/verticals/retail/web/control-room/weather-widget.js#L116) |  |  |
+| [daily](../harness/verticals/retail/web/control-room/weather-widget.js#L138) | today |  |
+| [figure](../harness/verticals/retail/web/control-room/weather-widget.js#L144) | now, full |  |
+| [drawPreview](../harness/verticals/retail/web/control-room/weather-widget.js#L148) |  |  |
+| [hidePreview](../harness/verticals/retail/web/control-room/weather-widget.js#L160) |  |  |
+| [showPreview](../harness/verticals/retail/web/control-room/weather-widget.js#L161) |  |  |
+| [hoursHtml](../harness/verticals/retail/web/control-room/weather-widget.js#L166) |  |  |
+| [daysHtml](../harness/verticals/retail/web/control-room/weather-widget.js#L177) |  |  |
+| [drawSheet](../harness/verticals/retail/web/control-room/weather-widget.js#L184) | force |  |
+| [buildSheet](../harness/verticals/retail/web/control-room/weather-widget.js#L222) |  |  |
+| [open](../harness/verticals/retail/web/control-room/weather-widget.js#L230) |  |  |
+| [close](../harness/verticals/retail/web/control-room/weather-widget.js#L244) |  |  |
+| [draw](../harness/verticals/retail/web/control-room/weather-widget.js#L253) |  |  |
+| [refresh](../harness/verticals/retail/web/control-room/weather-widget.js#L254) | visible |  |
+| [mountMap](../harness/verticals/retail/web/control-room/weather-widget.js#L271) |  |  |
+| [map](../harness/verticals/retail/web/control-room/weather-widget.js#L306) | el, opts={} |  |
 
 ### harness/verticals/retail/web/retail-scope.js
 
@@ -7851,6 +7851,13 @@ Values belong in recipient-owned private runtime configuration.
 | [authorize](../tools/authorize_local_budget.py#L23) | state, amount_usd, days, acknowledged |  |
 | [main](../tools/authorize_local_budget.py#L67) |  |  |
 
+### tools/check-processed-sample.py
+
+| Function | Arguments | Source description |
+| --- | --- | --- |
+| [main](../tools/check-processed-sample.py#L23) |  |  |
+| [get](../tools/check-processed-sample.py#L41) | path, headers |  |
+
 ### tools/configure.py
 
 | Function | Arguments | Source description |
@@ -7865,11 +7872,11 @@ Values belong in recipient-owned private runtime configuration.
 | Function | Arguments | Source description |
 | --- | --- | --- |
 | [main](../tools/dev.py#L6) |  |  |
-| [record_attempt](../tools/dev.py#L14) |  |  |
-| [local](../tools/dev.py#L18) | address |  |
-| [connect](../tools/dev.py#L24) | s, address |  |
-| [connect_ex](../tools/dev.py#L27) | s, address |  |
-| [dns](../tools/dev.py#L30) | host, *a, **kw |  |
+| [record_attempt](../tools/dev.py#L16) |  |  |
+| [local](../tools/dev.py#L20) | address |  |
+| [connect](../tools/dev.py#L26) | s, address |  |
+| [connect_ex](../tools/dev.py#L29) | s, address |  |
+| [dns](../tools/dev.py#L32) | host, *a, **kw |  |
 
 ### tools/distribution.py
 
@@ -7887,6 +7894,16 @@ Values belong in recipient-owned private runtime configuration.
 | [check_connect_ex](../tools/offline/sitecustomize.py#L12) | self, address |  |
 | [check_dns](../tools/offline/sitecustomize.py#L15) | host, *a, **kw |  |
 | [__init__](../tools/offline/sitecustomize.py#L19) | self, args, *a, **kw |  |
+
+### tools/processed_sample.py
+
+| Function | Arguments | Source description |
+| --- | --- | --- |
+| [digest](../tools/processed_sample.py#L17) | path |  |
+| [verify_sample](../tools/processed_sample.py#L25) | directory |  |
+| [download_sample](../tools/processed_sample.py#L45) |  |  |
+| [install_sample](../tools/processed_sample.py#L85) | state, sample |  |
+| [rebind](../tools/processed_sample.py#L109) | value |  |
 
 ### tools/render-fixture.py
 

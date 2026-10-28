@@ -1,6 +1,6 @@
 (function(root){
  'use strict';
- const requestedOverview=new URLSearchParams(location.hash.slice(1)).get('view')==='location';
+ const entryParams=new URLSearchParams(location.hash.slice(1)),requestedOverview=entryParams.get('view')==='location',requestedPeriod=entryParams.get('period');
  let initialized=false,weatherHost=null,view,weather,roomRoot,playerHost,workspace,sessionDialog,pendingSnapshot=null;
  const q=s=>document.querySelector(s);
  async function refreshData(){
@@ -111,8 +111,9 @@
  });
  function init(){
   if(initialized)return;initialized=true;document.body.classList.toggle('embedded-viewer',new URLSearchParams(location.search).get('embedded')==='1');workspace=q('#benchmarkWorkspace');playerHost=workspace.parentElement;roomRoot=q('#locationRoot');
-  view=LocationView.create({root:roomRoot,data:maintained()?{locations:data.location?[data.location]:[]}:LocationData.build({clips:data.clips,tracks:trackData,eventTypes:root.monitoringProfile?.event_types,page:data}),onOpenCameras:()=>{showCameras();returnToLiveReplay();},onOpenSession:openSession,onLocationChange:()=>weather.open()});
-  weather=AreaWeather.create({host:q('#headerWeather'),place:data.location?.weather});nameBack(data.location?.name);
+  view=LocationView.create({root:roomRoot,data:maintained()?{locations:data.location?[data.location]:[]}:LocationData.build({clips:data.clips,tracks:trackData,eventTypes:root.monitoringProfile?.event_types,page:data}),onOpenCameras:()=>{showCameras();returnToLiveReplay();},onOpenSession:openSession,onLocationChange:()=>weather.open(),locationContext:root.RETAIL_CAPABILITIES?.locationContext!==false});
+  if(['week','month','year'].includes(requestedPeriod))view.setPeriod(requestedPeriod);
+  weather=AreaWeather.create({host:q('#headerWeather'),place:data.location?.weather,enabled:root.RETAIL_CAPABILITIES?.locationContext!==false});nameBack(data.location?.name);
   // The maintained record names its location even while its coordinates await commissioning.
   if(weather.place)view.setLocation(weather.place);else if(maintained()&&data.location)view.setLocation({name:data.location.name,address:data.location.address});
   weather.mountMap();

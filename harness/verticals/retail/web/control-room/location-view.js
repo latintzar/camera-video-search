@@ -55,6 +55,7 @@ function create(options){
 <dialog class="home-dialog location-catalog-dialog" id="locationCatalogDialog" aria-labelledby="locationCatalogTitle"><header class="home-dialog-heading"><div><h2 id="locationCatalogTitle">Set up catalog</h2><p>Connect product references to this shop.</p></div><button id="locationCatalogClose" class="home-dialog-close" type="button" aria-label="Close catalog setup">${icon('x')}</button></header><div id="locationCatalogBody" class="location-catalog-body"><p>Loading catalog setup…</p></div></dialog>
 </section>`;
  const q=selector=>host.querySelector(selector);
+ if(options.locationContext===false)q('.home-neighbourhood').hidden=true;
  function listen(element,type,handler,opts){element?.addEventListener(type,handler,opts);cleanups.push(()=>element?.removeEventListener(type,handler,opts));}
 
  /* ── the stage: the shop's own footage, its name, its tags ─────────────────────────────────── */
@@ -64,7 +65,7 @@ function create(options){
   title.textContent=name||address||'Your shop';line.textContent=name?address:'';line.hidden=!line.textContent;
   q('#locationStage').setAttribute('aria-label',name||address||'Your shop');
   const button=q('#locationAddressButton');button.hidden=!!place;
-  if(!neighbourhoodAsked&&!disposed&&(address||model.place.address)){
+  if(options.locationContext!==false&&!neighbourhoodAsked&&!disposed&&(address||model.place.address)){
    neighbourhoodAsked=true;const loc=data?.locations?.[0]||data?.location||{};
    // A location names its neighbourhood record when it has one; the map picture stands on its own.
    if(loc.neighbourhood_url)fetch(loc.neighbourhood_url,{credentials:'same-origin'}).then(response=>response.ok?response.json():null).then(next=>{if(disposed||!next)return;neighbourhood=next;renderNeighbourhood();}).catch(()=>{});

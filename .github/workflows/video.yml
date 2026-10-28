@@ -18,6 +18,8 @@ jobs:
       - run: make install
       - run: .venv/bin/python -m pip check
       - run: make test
+      - name: Retained processed sample and real HTTP backend
+        run: .venv/bin/python tools/check-processed-sample.py
       - name: Failed offline contract details
         if: failure()
         run: |

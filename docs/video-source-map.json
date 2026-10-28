@@ -37727,7 +37727,7 @@
     {
       "language": "Python",
       "file": "harness/verticals/retail/control_room_routes.py",
-      "line": 155,
+      "line": 156,
       "name": "control_room_status",
       "arguments": [
         "request"
@@ -37737,7 +37737,7 @@
     {
       "language": "Python",
       "file": "harness/verticals/retail/control_room_routes.py",
-      "line": 170,
+      "line": 171,
       "name": "control_room_revision",
       "arguments": [
         "request"
@@ -37747,7 +37747,7 @@
     {
       "language": "Python",
       "file": "harness/verticals/retail/control_room_routes.py",
-      "line": 206,
+      "line": 207,
       "name": "control_room_asset",
       "arguments": [
         "request",
@@ -58032,7 +58032,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/app.js",
-      "line": 531,
+      "line": 533,
       "name": "icon",
       "arguments": [
         "name"
@@ -58042,7 +58042,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/app.js",
-      "line": 547,
+      "line": 549,
       "name": "motionGroups",
       "arguments": [
         "tr",
@@ -58053,7 +58053,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/app.js",
-      "line": 555,
+      "line": 557,
       "name": "renderDurationTimeline",
       "arguments": [],
       "description": ""
@@ -58061,7 +58061,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/app.js",
-      "line": 564,
+      "line": 566,
       "name": "updatePlayerUI",
       "arguments": [
         "t"
@@ -58071,7 +58071,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/app.js",
-      "line": 571,
+      "line": 573,
       "name": "previewSeek",
       "arguments": [
         "t",
@@ -58082,7 +58082,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/app.js",
-      "line": 576,
+      "line": 578,
       "name": "resumePlayback",
       "arguments": [],
       "description": ""
@@ -58090,7 +58090,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/app.js",
-      "line": 577,
+      "line": 579,
       "name": "togglePlay",
       "arguments": [],
       "description": ""
@@ -58098,7 +58098,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/app.js",
-      "line": 578,
+      "line": 580,
       "name": "flash",
       "arguments": [
         "message"
@@ -58108,7 +58108,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/app.js",
-      "line": 580,
+      "line": 582,
       "name": "revealControls",
       "arguments": [],
       "description": ""
@@ -58116,7 +58116,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/app.js",
-      "line": 581,
+      "line": 583,
       "name": "initWatchUI",
       "arguments": [],
       "description": ""
@@ -58979,7 +58979,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/location-view.js",
-      "line": 58,
+      "line": 59,
       "name": "listen",
       "arguments": [
         "element",
@@ -58992,7 +58992,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/location-view.js",
-      "line": 61,
+      "line": 62,
       "name": "renderPlace",
       "arguments": [],
       "description": ""
@@ -59000,7 +59000,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/location-view.js",
-      "line": 74,
+      "line": 75,
       "name": "renderFootage",
       "arguments": [],
       "description": ""
@@ -59008,7 +59008,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/location-view.js",
-      "line": 83,
+      "line": 84,
       "name": "release",
       "arguments": [],
       "description": ""
@@ -59016,7 +59016,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/location-view.js",
-      "line": 85,
+      "line": 86,
       "name": "play",
       "arguments": [],
       "description": ""
@@ -59024,7 +59024,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/location-view.js",
-      "line": 86,
+      "line": 87,
       "name": "rest",
       "arguments": [],
       "description": ""
@@ -59032,7 +59032,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/location-view.js",
-      "line": 87,
+      "line": 88,
       "name": "nextRecording",
       "arguments": [],
       "description": ""
@@ -59040,7 +59040,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/location-view.js",
-      "line": 90,
+      "line": 91,
       "name": "traceOf",
       "arguments": [
         "recording"
@@ -59050,7 +59050,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/location-view.js",
-      "line": 96,
+      "line": 97,
       "name": "clearTags",
       "arguments": [],
       "description": ""
@@ -59058,7 +59058,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/location-view.js",
-      "line": 98,
+      "line": 99,
       "name": "drawTags",
       "arguments": [],
       "description": ""
@@ -59066,7 +59066,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/location-view.js",
-      "line": 119,
+      "line": 120,
       "name": "tagLoop",
       "arguments": [],
       "description": ""
@@ -59074,7 +59074,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/location-view.js",
-      "line": 125,
+      "line": 126,
       "name": "drawMark",
       "arguments": [
         "node",
@@ -59085,7 +59085,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/location-view.js",
-      "line": 145,
+      "line": 146,
       "name": "tileNode",
       "arguments": [
         "tile"
@@ -59095,7 +59095,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/location-view.js",
-      "line": 151,
+      "line": 152,
       "name": "paintTile",
       "arguments": [
         "node",
@@ -59107,7 +59107,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/location-view.js",
-      "line": 170,
+      "line": 171,
       "name": "fitUnit",
       "arguments": [
         "node",
@@ -59118,7 +59118,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/location-view.js",
-      "line": 177,
+      "line": 178,
       "name": "tick",
       "arguments": [
         "node"
@@ -59128,7 +59128,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/location-view.js",
-      "line": 181,
+      "line": 182,
       "name": "renderTiles",
       "arguments": [],
       "description": ""
@@ -59136,7 +59136,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/location-view.js",
-      "line": 209,
+      "line": 210,
       "name": "stampOf",
       "arguments": [
         "tile"
@@ -59146,7 +59146,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/location-view.js",
-      "line": 210,
+      "line": 211,
       "name": "newTracker",
       "arguments": [],
       "description": ""
@@ -59154,7 +59154,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/location-view.js",
-      "line": 215,
+      "line": 216,
       "name": "open",
       "arguments": [
         "key",
@@ -59165,7 +59165,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/location-view.js",
-      "line": 235,
+      "line": 236,
       "name": "openTile",
       "arguments": [
         "tile"
@@ -59175,7 +59175,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/location-view.js",
-      "line": 246,
+      "line": 247,
       "name": "renderProducts",
       "arguments": [],
       "description": ""
@@ -59183,7 +59183,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/location-view.js",
-      "line": 256,
+      "line": 257,
       "name": "stopPreviews",
       "arguments": [],
       "description": ""
@@ -59191,7 +59191,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/location-view.js",
-      "line": 257,
+      "line": 258,
       "name": "clearPreviews",
       "arguments": [],
       "description": ""
@@ -59199,7 +59199,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/location-view.js",
-      "line": 260,
+      "line": 261,
       "name": "bindPreview",
       "arguments": [
         "row",
@@ -59213,7 +59213,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/location-view.js",
-      "line": 301,
+      "line": 302,
       "name": "openProduct",
       "arguments": [
         "product"
@@ -59223,7 +59223,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/location-view.js",
-      "line": 314,
+      "line": 315,
       "name": "renderNeighbourhood",
       "arguments": [],
       "description": ""
@@ -59231,7 +59231,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/location-view.js",
-      "line": 324,
+      "line": 325,
       "name": "catalogLocationParams",
       "arguments": [],
       "description": ""
@@ -59239,7 +59239,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/location-view.js",
-      "line": 325,
+      "line": 326,
       "name": "catalogMethodButton",
       "arguments": [
         "method"
@@ -59249,7 +59249,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/location-view.js",
-      "line": 326,
+      "line": 327,
       "name": "openCatalogSetup",
       "arguments": [],
       "description": ""
@@ -59257,7 +59257,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/location-view.js",
-      "line": 331,
+      "line": 332,
       "name": "requestCatalogMethod",
       "arguments": [
         "method",
@@ -59268,7 +59268,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/location-view.js",
-      "line": 337,
+      "line": 338,
       "name": "renderCatalogImport",
       "arguments": [],
       "description": ""
@@ -59276,7 +59276,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/location-view.js",
-      "line": 340,
+      "line": 341,
       "name": "createPhotoHandoff",
       "arguments": [],
       "description": ""
@@ -59284,7 +59284,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/location-view.js",
-      "line": 345,
+      "line": 346,
       "name": "loadAgents",
       "arguments": [],
       "description": ""
@@ -59292,7 +59292,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/location-view.js",
-      "line": 353,
+      "line": 354,
       "name": "render",
       "arguments": [],
       "description": ""
@@ -60076,14 +60076,15 @@
       "arguments": [
         "{host",
         "onLocation",
-        "place:configured}={}"
+        "place:configured",
+        "enabled=true}={}"
       ],
       "description": ""
     },
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/weather-widget.js",
-      "line": 115,
+      "line": 116,
       "name": "drawChip",
       "arguments": [],
       "description": ""
@@ -60091,7 +60092,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/weather-widget.js",
-      "line": 137,
+      "line": 138,
       "name": "daily",
       "arguments": [
         "today"
@@ -60101,7 +60102,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/weather-widget.js",
-      "line": 143,
+      "line": 144,
       "name": "figure",
       "arguments": [
         "now",
@@ -60112,7 +60113,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/weather-widget.js",
-      "line": 147,
+      "line": 148,
       "name": "drawPreview",
       "arguments": [],
       "description": ""
@@ -60120,7 +60121,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/weather-widget.js",
-      "line": 159,
+      "line": 160,
       "name": "hidePreview",
       "arguments": [],
       "description": ""
@@ -60128,7 +60129,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/weather-widget.js",
-      "line": 160,
+      "line": 161,
       "name": "showPreview",
       "arguments": [],
       "description": ""
@@ -60136,7 +60137,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/weather-widget.js",
-      "line": 165,
+      "line": 166,
       "name": "hoursHtml",
       "arguments": [],
       "description": ""
@@ -60144,7 +60145,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/weather-widget.js",
-      "line": 176,
+      "line": 177,
       "name": "daysHtml",
       "arguments": [],
       "description": ""
@@ -60152,7 +60153,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/weather-widget.js",
-      "line": 183,
+      "line": 184,
       "name": "drawSheet",
       "arguments": [
         "force"
@@ -60162,7 +60163,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/weather-widget.js",
-      "line": 221,
+      "line": 222,
       "name": "buildSheet",
       "arguments": [],
       "description": ""
@@ -60170,7 +60171,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/weather-widget.js",
-      "line": 229,
+      "line": 230,
       "name": "open",
       "arguments": [],
       "description": ""
@@ -60178,7 +60179,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/weather-widget.js",
-      "line": 243,
+      "line": 244,
       "name": "close",
       "arguments": [],
       "description": ""
@@ -60186,7 +60187,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/weather-widget.js",
-      "line": 252,
+      "line": 253,
       "name": "draw",
       "arguments": [],
       "description": ""
@@ -60194,7 +60195,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/weather-widget.js",
-      "line": 253,
+      "line": 254,
       "name": "refresh",
       "arguments": [
         "visible"
@@ -60204,7 +60205,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/weather-widget.js",
-      "line": 270,
+      "line": 271,
       "name": "mountMap",
       "arguments": [],
       "description": ""
@@ -60212,7 +60213,7 @@
     {
       "language": "JavaScript",
       "file": "harness/verticals/retail/web/control-room/weather-widget.js",
-      "line": 305,
+      "line": 306,
       "name": "map",
       "arguments": [
         "el",
@@ -67252,6 +67253,25 @@
     },
     {
       "language": "Python",
+      "file": "tools/check-processed-sample.py",
+      "line": 23,
+      "name": "main",
+      "arguments": [],
+      "description": ""
+    },
+    {
+      "language": "Python",
+      "file": "tools/check-processed-sample.py",
+      "line": 41,
+      "name": "get",
+      "arguments": [
+        "path",
+        "headers"
+      ],
+      "description": ""
+    },
+    {
+      "language": "Python",
       "file": "tools/configure.py",
       "line": 14,
       "name": "private_path",
@@ -67300,7 +67320,7 @@
     {
       "language": "Python",
       "file": "tools/dev.py",
-      "line": 14,
+      "line": 16,
       "name": "record_attempt",
       "arguments": [],
       "description": ""
@@ -67308,7 +67328,7 @@
     {
       "language": "Python",
       "file": "tools/dev.py",
-      "line": 18,
+      "line": 20,
       "name": "local",
       "arguments": [
         "address"
@@ -67318,7 +67338,7 @@
     {
       "language": "Python",
       "file": "tools/dev.py",
-      "line": 24,
+      "line": 26,
       "name": "connect",
       "arguments": [
         "s",
@@ -67329,7 +67349,7 @@
     {
       "language": "Python",
       "file": "tools/dev.py",
-      "line": 27,
+      "line": 29,
       "name": "connect_ex",
       "arguments": [
         "s",
@@ -67340,7 +67360,7 @@
     {
       "language": "Python",
       "file": "tools/dev.py",
-      "line": 30,
+      "line": 32,
       "name": "dns",
       "arguments": [
         "host",
@@ -67419,6 +67439,55 @@
         "args",
         "*a",
         "**kw"
+      ],
+      "description": ""
+    },
+    {
+      "language": "Python",
+      "file": "tools/processed_sample.py",
+      "line": 17,
+      "name": "digest",
+      "arguments": [
+        "path"
+      ],
+      "description": ""
+    },
+    {
+      "language": "Python",
+      "file": "tools/processed_sample.py",
+      "line": 25,
+      "name": "verify_sample",
+      "arguments": [
+        "directory"
+      ],
+      "description": ""
+    },
+    {
+      "language": "Python",
+      "file": "tools/processed_sample.py",
+      "line": 45,
+      "name": "download_sample",
+      "arguments": [],
+      "description": ""
+    },
+    {
+      "language": "Python",
+      "file": "tools/processed_sample.py",
+      "line": 85,
+      "name": "install_sample",
+      "arguments": [
+        "state",
+        "sample"
+      ],
+      "description": ""
+    },
+    {
+      "language": "Python",
+      "file": "tools/processed_sample.py",
+      "line": 109,
+      "name": "rebind",
+      "arguments": [
+        "value"
       ],
       "description": ""
     },
@@ -68639,28 +68708,28 @@
       "method": "GET",
       "path": "/api/retail/viewer",
       "file": "harness/verticals/retail/control_room_routes.py",
-      "line": 155,
+      "line": 156,
       "function": "control_room_status"
     },
     {
       "method": "GET",
       "path": "/api/tiles/revision",
       "file": "harness/verticals/retail/control_room_routes.py",
-      "line": 170,
+      "line": 171,
       "function": "control_room_revision"
     },
     {
       "method": "GET",
       "path": "/control-room/",
       "file": "harness/verticals/retail/control_room_routes.py",
-      "line": 206,
+      "line": 207,
       "function": "control_room_asset"
     },
     {
       "method": "GET",
       "path": "/control-room/{asset:path}",
       "file": "harness/verticals/retail/control_room_routes.py",
-      "line": 206,
+      "line": 207,
       "function": "control_room_asset"
     },
     {
