@@ -5,7 +5,7 @@ native handlers; session admission, data, mutations and pricing remain server-ow
 """
 from __future__ import annotations
 import json,re
-from urllib.parse import urlsplit
+from urllib.parse import urlsplit,urlunsplit
 import httpx
 
 MAX_RESPONSE=16*1024*1024
@@ -58,7 +58,7 @@ class MountedApp:
         if self.orders and value.startswith(order_path+'/'):return value[len(order_path):]
         if self.prefix and value.startswith(self.prefix+'/'):return value[len(self.prefix):]
         return value
-    def headers(self,headers,path=''):
+    def headers(self,headers,path='',origin=''):
         result=[]
         for key,value in headers:
             name=key.lower()
@@ -67,8 +67,12 @@ class MountedApp:
             elif name in {b'location',b'content-security-policy'}:
                 text=value.decode('latin-1')
                 if self.orders:text=text.replace(self.orders,"'self'" if name==b'content-security-policy' else self.path('/orders'))
-                if name==b'location' and text.startswith('/') and not text.startswith('//') and not text.startswith(self.prefix+'/'):
-                    text=self.prefix+text
+                if name==b'location' and self.prefix:
+                    target=urlsplit(text); public=urlsplit(origin)
+                    same_origin=bool(target.scheme and target.netloc and target.scheme==public.scheme and target.netloc==public.netloc)
+                    relative=text.startswith('/') and not text.startswith('//')
+                    if (relative or same_origin) and target.path.startswith('/') and target.path!=self.prefix and not target.path.startswith(self.prefix+'/'):
+                        text=urlunsplit((target.scheme,target.netloc,self.prefix+target.path,target.query,target.fragment))
                 value=text.encode('latin-1')
             result.append((key,value))
         kind=dict(result).get(b'content-type',b'')
@@ -114,7 +118,7 @@ class MountedApp:
         async def wrapped(message):
             nonlocal pending,rewrite,size
             if message['type']=='http.response.start':
-                pending={**message,'headers':self.headers(message.get('headers',[]),path)}
+                pending={**message,'headers':self.headers(message.get('headers',[]),path,self.origin(scope))}
                 kind=dict(pending['headers']).get(b'content-type',b'').split(b';')[0]
                 rewrite=scope['method']!='HEAD' and kind in {b'text/html',b'text/css',b'application/javascript',b'text/javascript',b'application/json',b'image/svg+xml'}
                 if not rewrite:await send(pending)
@@ -159,7 +163,7 @@ class MountedApp:
         if any(x in kind for x in ['javascript','text/','json','svg']):
             try:data=self.text(data.decode(),self.origin(scope)).encode()
             except UnicodeError:pass
-        result=self.headers([(k.encode('latin-1'),v.encode('latin-1')) for k,v in response.headers.items() if k.lower() not in {'content-length','connection','transfer-encoding','content-encoding','etag','set-cookie'}],path)
+        result=self.headers([(k.encode('latin-1'),v.encode('latin-1')) for k,v in response.headers.items() if k.lower() not in {'content-length','connection','transfer-encoding','content-encoding','etag','set-cookie'}],path,self.origin(scope))
         result.append((b'content-length',str(len(data)).encode()))
         await send({'type':'http.response.start','status':response.status_code,'headers':result});await send({'type':'http.response.body','body':data})
     @staticmethod

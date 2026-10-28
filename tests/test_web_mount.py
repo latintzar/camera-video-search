@@ -92,3 +92,27 @@ def test_native_root_stylesheet_imports_and_script_urls_are_prefixed():
  assert "url('/apps/video/theme.css')" in mount.text("@import url('/theme.css');")
  assert mount.value({'sheet':'/style.css'})=={'sheet':'/apps/video/style.css'}
  assert "'/apps/video/app.js'" in mount.text("const script='/app.js';")
+
+
+@pytest.mark.parametrize(('location','expected'),[
+ ('https://preview.example.test/control-room/?clip=1#frame','https://preview.example.test/apps/video/control-room/?clip=1#frame'),
+ ('https://preview.example.test/apps/video/control-room/','https://preview.example.test/apps/video/control-room/'),
+ ('https://preview.example.test/apps/video','https://preview.example.test/apps/video'),
+ ('https://other.example.test/control-room/','https://other.example.test/control-room/'),
+ ('//other.example.test/control-room/','//other.example.test/control-room/'),
+ ('/control-room/?clip=1#frame','/apps/video/control-room/?clip=1#frame'),
+])
+def test_redirects_preserve_same_origin_mount(location,expected):
+ app=sample()
+ @app.get('/redirect')
+ def redirect():return Response(status_code=307,headers={'Location':location})
+ with TestClient(MountedApp(app,prefix='/apps/video',public_origin='https://preview.example.test'),base_url='https://preview.example.test') as client:
+  assert client.get('/apps/video/redirect',follow_redirects=False).headers['location']==expected
+
+def test_native_fastapi_slash_redirect_retains_mount():
+ app=FastAPI()
+ @app.get('/control-room/')
+ def control_room():return {'ok':True}
+ with TestClient(MountedApp(app,prefix='/apps/video',public_origin='https://preview.example.test'),base_url='https://preview.example.test') as client:
+  response=client.get('/apps/video/control-room?clip=1',follow_redirects=False)
+  assert response.headers['location']=='https://preview.example.test/apps/video/control-room/?clip=1'
