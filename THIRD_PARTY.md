@@ -24,3 +24,5 @@ The included synthetic recording, poster and supplied annotations are authored p
 ## Downloadable processed retail sample
 
 The optional startup download includes Standard Cognition RetailAction material under the Standard.AI Dataset License, and Intel Video Summarization For Retail material curated by Parker Lischwe under CC BY-SA 4.0. The data release contains complete licences and NOTICE. Original adapter code and generated business history use MIT. See [Sample guide](docs/processed-sample.md) and [pinned release descriptor](examples/processed-retail.json).
+
+The source footage visible in `docs/images/home.png` and `docs/images/camera-phone.png` is Standard Cognition RetailAction material. The [complete Standard.AI Dataset License](docs/images/licences/StandardAI-Dataset.txt) and [required NOTICE](docs/images/NOTICE) accompany those screenshots. Their original application interface elements retain MIT.

@@ -8,6 +8,8 @@ Originally **Rocoto Video**, built on the Vitrina Harness. This source beta incl
 
 ![The native camera player with the retained RetailAction recording](docs/images/home.png)
 
+RetailAction footage by Standard Cognition. [Source licence and attribution](docs/images/NOTICE).
+
 The starter opens the retained 45-recording retail sample, with its actual processing results, tracks and source licences.
 
 ## Run the interface
