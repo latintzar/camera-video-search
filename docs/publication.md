@@ -7,3 +7,5 @@ The public README names the retail use case, starts with the actual native dashb
 The first result uses a twelve-second authored recording and three supplied annotations processed by the original CPU admission and tracker code. GPU indexing/inspection, live camera acquisition and business-event accuracy have separate commissioning evidence.
 
 A second fresh Python 3.12 CPU environment on an isolated source copy passed dependency consistency and the four network-fenced verification suites. It used recipient-owned synthetic state outside the checkout. Original services, source trees, provider accounts and customer data were unchanged.
+
+Fresh public CI exposed its missing operating-system media tools in two real clipping/probing tests. FFmpeg and ffprobe are now declared in the setup and dependency guides and installed in the isolated CI runner. The workflow also checks installed Python dependencies and emits bounded, literal-redacted diagnostics for failed suites.

@@ -2,6 +2,13 @@
 
 ## First result
 
+Use Python 3.12. Install FFmpeg and its `ffprobe` tool before running the CPU media checks. On Ubuntu:
+
+```sh
+sudo apt-get update
+sudo apt-get install --no-install-recommends -y ffmpeg
+```
+
 ```sh
 make install
 make dev

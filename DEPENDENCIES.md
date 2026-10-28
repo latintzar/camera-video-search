@@ -4,6 +4,8 @@ This clean source export comes from the Vitrina software Harness, originally ext
 
 ## Bare runtime
 
+The Video starter uses Python 3.12 with `requirements-lock.txt`. Its CPU media preparation and inspection checks also use the `ffmpeg` and `ffprobe` executables from FFmpeg. The included authored recording is ready for playback; the complete verification suite exercises real clipping and probing with those tools. [Getting started](docs/get-started.md) includes the Ubuntu installation commands.
+
 Python 3.12 and `harness/requirements.txt` are authoritative for the shared runtime. `requirements-dev.txt` adds pinned pytest dependencies. The fresh shared installation was verified independently of the optional retail model stack. `layout.py` installs runtime, mechanics, SDK and exactly one selected vertical.
 
 The page needs shared theme/mark/font/integration assets under `app/` and vendored frontend libraries under `harness/web/vendor/`. Licences/notices remain with the source. The packager declares shared assets and uses Git selection or the explicit clean-export inventory. It carries the selected vertical and shared requirements, with the maintained backend read/migration closure only for retail.

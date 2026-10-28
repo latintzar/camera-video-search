@@ -10,7 +10,7 @@ The native dashboard runs the supplied twelve-second recording and three authore
 
 ## Run the interface
 
-Python 3.12. The included recording and annotations are authored synthetic fixtures.
+Use Python 3.12 and FFmpeg, including `ffmpeg` and `ffprobe` on your PATH. The included recording and annotations are authored synthetic fixtures.
 
 ```sh
 git clone https://github.com/latintzar/camera-video-search.git
