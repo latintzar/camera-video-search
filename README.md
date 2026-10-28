@@ -1,6 +1,8 @@
-# Camera video search for retail teams
+# Video Search
 
-Camera Video Search is a retail camera workspace. Search recordings, inspect source footage and compute nine trackers from admitted observations.
+Video Search is a tool for searching and reviewing camera footage.
+
+Its retail workspace connects source recordings, model observations and nine deterministic trackers.
 
 Originally **Rocoto Video**, built on the Vitrina Harness. This source beta includes the original retail interface, ingestion and indexing code, Cosmos adapters, source-scoped playback, observation admission, nine deterministic trackers and the shared agent workspace.
 

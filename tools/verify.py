@@ -4,7 +4,7 @@ from pathlib import Path
 import json,os,subprocess,sys,time,tempfile
 R=Path(__file__).resolve().parents[1]
 SUITES={
- 'starter':['tests/test_starter.py','tests/test_configure.py'],
+ 'starter':['tests/test_starter.py','tests/test_configure.py','tests/test_web_mount.py'],
  'source-pipeline':['harness/tests/'+n for n in ['test_source_intake.py','test_source_visibility.py','test_source_worker.py','test_source_embedding.py','test_source_routes.py','test_source_host_routes.py']],
  'retrieval-budget':['harness/tests/'+n for n in ['test_compute_guard.py','test_qdrant_retrieval.py','test_cosmos_publication.py','test_cosmos_retrieval.py','test_cosmos_inspect.py']],
  'events-player':['harness/tests/'+n for n in ['test_visit_basket.py','test_retail_stream_import.py','test_retail_script_signals.py','test_retail_settings.py','test_retail_urls.py','test_control_room.py']],

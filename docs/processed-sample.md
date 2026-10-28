@@ -35,6 +35,20 @@ For a machine with the verified sample already available:
 
 The synthetic shop in `examples/` remains a small protocol test fixture. The retained processed sample is the starter's default.
 
+## Host a preview
+
+The same backend can mount below an existing site's URL path:
+
+```sh
+.venv/bin/python tools/dev.py --state "$HOME/.local/state/video-public" \
+  --public-preview --prefix /apps/video \
+  --public-origin https://preview.example.com --port 18530
+```
+
+Reverse-proxy that path to the loopback listener, preserving the original Host header. The entry is `/apps/video/control-room/#clip=retailaction-000027-rank0`. Historical Home opens at `/apps/video/control-room/#view=location&period=year`.
+
+Public visitors use a newly issued native observer session over the retained sample. A server wrapper admits reads and enforces the read-only contract before the native handlers. Source URLs and cookie paths are mounted on the server; camera byte ranges and event streams retain their native transport. The session cookie is HttpOnly, SameSite Strict and Secure at the configured HTTPS origin. Changes run in the recipient's own workspace.
+
 ## Source licences
 
 RetailAction was published by **Standard Cognition (Standard AI)** under the [Standard.AI Dataset License](https://huggingface.co/datasets/standard-cognition/RetailAction/blob/main/LICENSE). Its licence allows redistribution with attribution, the licence and the required NOTICE, and includes separate commercial terms. The package contains that complete licence and NOTICE, and each recording displays its source credit. Source anonymisation and camera-local identity scope are preserved.

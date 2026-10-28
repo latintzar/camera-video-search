@@ -23,6 +23,7 @@ ROOT = Path(__file__).resolve().parents[1]
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--sample-dir', type=Path)
+    parser.add_argument('--public-preview', action='store_true')
     args = parser.parse_args()
     sample = verify_sample(args.sample_dir) if args.sample_dir else download_sample()
     with socket.socket() as reservation:
@@ -33,13 +34,17 @@ def main():
         state = temporary / 'state'
         environment = {key: value for key, value in os.environ.items() if key in {'PATH', 'HOME', 'LANG', 'LC_ALL', 'SSL_CERT_FILE', 'SSL_CERT_DIR'}}
         with (temporary / 'server.log').open('w') as log:
-            process = subprocess.Popen([sys.executable, str(ROOT / 'tools/dev.py'), '--state', str(state), '--sample-dir', str(sample), '--port', str(port)], env=environment, stdout=log, stderr=log, start_new_session=True)
+            command = [sys.executable, str(ROOT / 'tools/dev.py'), '--state', str(state), '--sample-dir', str(sample), '--port', str(port)]
+            prefix = '/apps/video' if args.public_preview else ''
+            if args.public_preview:
+                command += ['--public-preview', '--prefix', prefix]
+            process = subprocess.Popen(command, env=environment, stdout=log, stderr=log, start_new_session=True)
             try:
                 origin = f'http://127.0.0.1:{port}'
                 client = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
 
                 def get(path, headers=None):
-                    return client.open(urllib.request.Request(origin + path, headers=headers or {}), timeout=30)
+                    return client.open(urllib.request.Request(origin + prefix + path, headers=headers or {}), timeout=30)
 
                 for _ in range(100):
                     if process.poll() is not None:
@@ -52,10 +57,24 @@ def main():
                         time.sleep(.2)
                 else:
                     raise RuntimeError('The processed-sample backend did not become ready.')
-                code = (state / 'owner-code.txt').read_text().strip()
-                request = urllib.request.Request(origin + '/api/session', data=json.dumps({'code': code}).encode(), headers={'Content-Type': 'application/json', 'Origin': origin, 'X-Rocoto-Page': '1'})
-                with client.open(request, timeout=30) as response:
-                    assert response.status == 200
+                if args.public_preview:
+                    with get('/api/session') as response:
+                        session = json.load(response)
+                    assert session['read_only'] is True and session['can_query'] is False
+                    assert session['viewing_as']['principal']['id'] == 'peter'
+                    for path in ['/api/observer', '/api/session', '/api/retail/location']:
+                        request = urllib.request.Request(origin + prefix + path, data=b'{}', headers={'Content-Type': 'application/json', 'Origin': origin, 'X-Rocoto-Page': '1'})
+                        try:
+                            client.open(request, timeout=30)
+                        except urllib.error.HTTPError as denied:
+                            assert denied.code == 403
+                        else:
+                            raise AssertionError('Public sample writes must remain server-denied.')
+                else:
+                    code = (state / 'owner-code.txt').read_text().strip()
+                    request = urllib.request.Request(origin + '/api/session', data=json.dumps({'code': code}).encode(), headers={'Content-Type': 'application/json', 'Origin': origin, 'X-Rocoto-Page': '1'})
+                    with client.open(request, timeout=30) as response:
+                        assert response.status == 200
                 with get('/api/retail/viewer/bootstrap') as response:
                     bootstrap = json.load(response)
                 assert bootstrap['read_authority'] == 'legacy'
@@ -80,7 +99,7 @@ def main():
                 with get('/control-room/') as response:
                     assert 'Authored annotations' not in response.read().decode()
                 assert json.loads((state / 'outbound-attempts.json').read_text())['blocked_outbound_attempts'] == 0
-                print(json.dumps({'processed_sample': 'passed', 'recordings': 45, 'model_answer_recordings': 9, 'reference_recordings': 40, 'latest_quarantined_observations': 17, 'core_trackers': 9, 'native_byte_range': 'passed', 'provider_calls': 0}))
+                print(json.dumps({'processed_sample': 'passed', 'public_preview': args.public_preview, 'recordings': 45, 'model_answer_recordings': 9, 'reference_recordings': 40, 'latest_quarantined_observations': 17, 'core_trackers': 9, 'native_byte_range': 'passed', 'provider_calls': 0}))
             finally:
                 os.killpg(process.pid, signal.SIGTERM)
                 process.wait(timeout=15)

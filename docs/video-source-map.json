@@ -25270,6 +25270,168 @@
     },
     {
       "language": "Python",
+      "file": "harness/mechanics/web_mount.py",
+      "line": 14,
+      "name": "base_path",
+      "arguments": [
+        "value"
+      ],
+      "description": ""
+    },
+    {
+      "language": "Python",
+      "file": "harness/mechanics/web_mount.py",
+      "line": 21,
+      "name": "__init__",
+      "arguments": [
+        "self",
+        "app",
+        "prefix",
+        "orders_origin",
+        "company",
+        "read_only",
+        "public_origin"
+      ],
+      "description": ""
+    },
+    {
+      "language": "Python",
+      "file": "harness/mechanics/web_mount.py",
+      "line": 26,
+      "name": "path",
+      "arguments": [
+        "self",
+        "path"
+      ],
+      "description": ""
+    },
+    {
+      "language": "Python",
+      "file": "harness/mechanics/web_mount.py",
+      "line": 27,
+      "name": "origin",
+      "arguments": [
+        "self",
+        "scope"
+      ],
+      "description": ""
+    },
+    {
+      "language": "Python",
+      "file": "harness/mechanics/web_mount.py",
+      "line": 30,
+      "name": "text",
+      "arguments": [
+        "self",
+        "text",
+        "origin"
+      ],
+      "description": ""
+    },
+    {
+      "language": "Python",
+      "file": "harness/mechanics/web_mount.py",
+      "line": 37,
+      "name": "attribute",
+      "arguments": [
+        "match"
+      ],
+      "description": ""
+    },
+    {
+      "language": "Python",
+      "file": "harness/mechanics/web_mount.py",
+      "line": 42,
+      "name": "value",
+      "arguments": [
+        "self",
+        "value",
+        "origin"
+      ],
+      "description": ""
+    },
+    {
+      "language": "Python",
+      "file": "harness/mechanics/web_mount.py",
+      "line": 50,
+      "name": "unvalue",
+      "arguments": [
+        "self",
+        "value",
+        "origin"
+      ],
+      "description": ""
+    },
+    {
+      "language": "Python",
+      "file": "harness/mechanics/web_mount.py",
+      "line": 59,
+      "name": "headers",
+      "arguments": [
+        "self",
+        "headers",
+        "path"
+      ],
+      "description": ""
+    },
+    {
+      "language": "Python",
+      "file": "harness/mechanics/web_mount.py",
+      "line": 77,
+      "name": "__call__",
+      "arguments": [
+        "self",
+        "scope",
+        "receive",
+        "send"
+      ],
+      "description": ""
+    },
+    {
+      "language": "Python",
+      "file": "harness/mechanics/web_mount.py",
+      "line": 103,
+      "name": "normalized_receive",
+      "arguments": [],
+      "description": ""
+    },
+    {
+      "language": "Python",
+      "file": "harness/mechanics/web_mount.py",
+      "line": 112,
+      "name": "wrapped",
+      "arguments": [
+        "message"
+      ],
+      "description": ""
+    },
+    {
+      "language": "Python",
+      "file": "harness/mechanics/web_mount.py",
+      "line": 135,
+      "name": "proxy",
+      "arguments": [
+        "self",
+        "scope",
+        "receive",
+        "send",
+        "path"
+      ],
+      "description": ""
+    },
+    {
+      "language": "Python",
+      "file": "harness/mechanics/web_mount.py",
+      "line": 164,
+      "name": "refuse",
+      "arguments": [
+        "send",
+        "status"
+      ],
+      "description": ""
+    },
+    {
+      "language": "Python",
       "file": "harness/mechanics/workspace_capabilities.py",
       "line": 5,
       "name": "__init__",
@@ -67262,7 +67424,7 @@
     {
       "language": "Python",
       "file": "tools/check-processed-sample.py",
-      "line": 41,
+      "line": 46,
       "name": "get",
       "arguments": [
         "path",
@@ -67320,7 +67482,7 @@
     {
       "language": "Python",
       "file": "tools/dev.py",
-      "line": 16,
+      "line": 19,
       "name": "record_attempt",
       "arguments": [],
       "description": ""
@@ -67328,7 +67490,7 @@
     {
       "language": "Python",
       "file": "tools/dev.py",
-      "line": 20,
+      "line": 23,
       "name": "local",
       "arguments": [
         "address"
@@ -67338,7 +67500,7 @@
     {
       "language": "Python",
       "file": "tools/dev.py",
-      "line": 26,
+      "line": 29,
       "name": "connect",
       "arguments": [
         "s",
@@ -67349,7 +67511,7 @@
     {
       "language": "Python",
       "file": "tools/dev.py",
-      "line": 29,
+      "line": 32,
       "name": "connect_ex",
       "arguments": [
         "s",
@@ -67360,7 +67522,7 @@
     {
       "language": "Python",
       "file": "tools/dev.py",
-      "line": 32,
+      "line": 35,
       "name": "dns",
       "arguments": [
         "host",
@@ -67439,6 +67601,64 @@
         "args",
         "*a",
         "**kw"
+      ],
+      "description": ""
+    },
+    {
+      "language": "Python",
+      "file": "tools/preview_app.py",
+      "line": 6,
+      "name": "__init__",
+      "arguments": [
+        "self",
+        "app",
+        "secure"
+      ],
+      "description": ""
+    },
+    {
+      "language": "Python",
+      "file": "tools/preview_app.py",
+      "line": 12,
+      "name": "admitted",
+      "arguments": [
+        "self"
+      ],
+      "description": ""
+    },
+    {
+      "language": "Python",
+      "file": "tools/preview_app.py",
+      "line": 24,
+      "name": "__call__",
+      "arguments": [
+        "self",
+        "scope",
+        "receive",
+        "send"
+      ],
+      "description": ""
+    },
+    {
+      "language": "Python",
+      "file": "tools/preview_app.py",
+      "line": 33,
+      "name": "observed",
+      "arguments": [
+        "message"
+      ],
+      "description": ""
+    },
+    {
+      "language": "Python",
+      "file": "tools/preview_app.py",
+      "line": 49,
+      "name": "public_sample",
+      "arguments": [
+        "app",
+        "prefix",
+        "secure",
+        "public_origin"
       ],
       "description": ""
     },

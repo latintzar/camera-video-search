@@ -3075,6 +3075,25 @@ Values belong in recipient-owned private runtime configuration.
 | [_endpoints](../harness/mechanics/wake_tools.py#L83) | context |  |
 | [acall](../harness/mechanics/wake_tools.py#L90) | context, name, arguments |  |
 
+### harness/mechanics/web_mount.py
+
+| Function | Arguments | Source description |
+| --- | --- | --- |
+| [base_path](../harness/mechanics/web_mount.py#L14) | value |  |
+| [__init__](../harness/mechanics/web_mount.py#L21) | self, app, prefix, orders_origin, company, read_only, public_origin |  |
+| [path](../harness/mechanics/web_mount.py#L26) | self, path |  |
+| [origin](../harness/mechanics/web_mount.py#L27) | self, scope |  |
+| [text](../harness/mechanics/web_mount.py#L30) | self, text, origin |  |
+| [attribute](../harness/mechanics/web_mount.py#L37) | match |  |
+| [value](../harness/mechanics/web_mount.py#L42) | self, value, origin |  |
+| [unvalue](../harness/mechanics/web_mount.py#L50) | self, value, origin |  |
+| [headers](../harness/mechanics/web_mount.py#L59) | self, headers, path |  |
+| [__call__](../harness/mechanics/web_mount.py#L77) | self, scope, receive, send |  |
+| [normalized_receive](../harness/mechanics/web_mount.py#L103) |  |  |
+| [wrapped](../harness/mechanics/web_mount.py#L112) | message |  |
+| [proxy](../harness/mechanics/web_mount.py#L135) | self, scope, receive, send, path |  |
+| [refuse](../harness/mechanics/web_mount.py#L164) | send, status |  |
+
 ### harness/mechanics/workspace_capabilities.py
 
 | Function | Arguments | Source description |
@@ -7856,7 +7875,7 @@ Values belong in recipient-owned private runtime configuration.
 | Function | Arguments | Source description |
 | --- | --- | --- |
 | [main](../tools/check-processed-sample.py#L23) |  |  |
-| [get](../tools/check-processed-sample.py#L41) | path, headers |  |
+| [get](../tools/check-processed-sample.py#L46) | path, headers |  |
 
 ### tools/configure.py
 
@@ -7872,11 +7891,11 @@ Values belong in recipient-owned private runtime configuration.
 | Function | Arguments | Source description |
 | --- | --- | --- |
 | [main](../tools/dev.py#L6) |  |  |
-| [record_attempt](../tools/dev.py#L16) |  |  |
-| [local](../tools/dev.py#L20) | address |  |
-| [connect](../tools/dev.py#L26) | s, address |  |
-| [connect_ex](../tools/dev.py#L29) | s, address |  |
-| [dns](../tools/dev.py#L32) | host, *a, **kw |  |
+| [record_attempt](../tools/dev.py#L19) |  |  |
+| [local](../tools/dev.py#L23) | address |  |
+| [connect](../tools/dev.py#L29) | s, address |  |
+| [connect_ex](../tools/dev.py#L32) | s, address |  |
+| [dns](../tools/dev.py#L35) | host, *a, **kw |  |
 
 ### tools/distribution.py
 
@@ -7894,6 +7913,16 @@ Values belong in recipient-owned private runtime configuration.
 | [check_connect_ex](../tools/offline/sitecustomize.py#L12) | self, address |  |
 | [check_dns](../tools/offline/sitecustomize.py#L15) | host, *a, **kw |  |
 | [__init__](../tools/offline/sitecustomize.py#L19) | self, args, *a, **kw |  |
+
+### tools/preview_app.py
+
+| Function | Arguments | Source description |
+| --- | --- | --- |
+| [__init__](../tools/preview_app.py#L6) | self, app, secure |  |
+| [admitted](../tools/preview_app.py#L12) | self |  |
+| [__call__](../tools/preview_app.py#L24) | self, scope, receive, send |  |
+| [observed](../tools/preview_app.py#L33) | message |  |
+| [public_sample](../tools/preview_app.py#L49) | app, prefix, secure, public_origin |  |
 
 ### tools/processed_sample.py
 
