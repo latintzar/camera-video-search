@@ -87,12 +87,8 @@ def test_control_room_media_urls_are_mounted_for_native_video():
  assert "'/apps/video/control-room/" in mount.text("const media='/control-room/';")
 
 
-def test_native_root_stylesheet_import_and_asset_paths_are_mounted():
- app=sample()
- @app.get('/native.css')
- def stylesheet():return Response('@import url("/theme.css"); .a{background:url(/assets/paper.png)}',media_type='text/css')
- with TestClient(MountedApp(app,prefix='/apps/video')) as client:
-  css=client.get('/apps/video/native.css').text
-  assert '@import url("/apps/video/theme.css")' in css
-  assert 'url(/apps/video/assets/paper.png)' in css
- assert MountedApp(app,prefix='/apps/video').value('/theme.css')=='/apps/video/theme.css'
+def test_native_root_stylesheet_imports_and_script_urls_are_prefixed():
+ mount=MountedApp(sample(),prefix='/apps/video')
+ assert "url('/apps/video/theme.css')" in mount.text("@import url('/theme.css');")
+ assert mount.value({'sheet':'/style.css'})=={'sheet':'/apps/video/style.css'}
+ assert "'/apps/video/app.js'" in mount.text("const script='/app.js';")

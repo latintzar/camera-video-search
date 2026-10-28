@@ -3084,15 +3084,15 @@ Values belong in recipient-owned private runtime configuration.
 | [path](../harness/mechanics/web_mount.py#L26) | self, path |  |
 | [origin](../harness/mechanics/web_mount.py#L27) | self, scope |  |
 | [text](../harness/mechanics/web_mount.py#L30) | self, text, origin |  |
-| [attribute](../harness/mechanics/web_mount.py#L37) | match |  |
-| [value](../harness/mechanics/web_mount.py#L42) | self, value, origin |  |
-| [unvalue](../harness/mechanics/web_mount.py#L50) | self, value, origin |  |
-| [headers](../harness/mechanics/web_mount.py#L59) | self, headers, path |  |
-| [__call__](../harness/mechanics/web_mount.py#L77) | self, scope, receive, send |  |
-| [normalized_receive](../harness/mechanics/web_mount.py#L103) |  |  |
-| [wrapped](../harness/mechanics/web_mount.py#L112) | message |  |
-| [proxy](../harness/mechanics/web_mount.py#L135) | self, scope, receive, send, path |  |
-| [refuse](../harness/mechanics/web_mount.py#L164) | send, status |  |
+| [attribute](../harness/mechanics/web_mount.py#L38) | match |  |
+| [value](../harness/mechanics/web_mount.py#L43) | self, value, origin |  |
+| [unvalue](../harness/mechanics/web_mount.py#L52) | self, value, origin |  |
+| [headers](../harness/mechanics/web_mount.py#L61) | self, headers, path |  |
+| [__call__](../harness/mechanics/web_mount.py#L79) | self, scope, receive, send |  |
+| [normalized_receive](../harness/mechanics/web_mount.py#L105) |  |  |
+| [wrapped](../harness/mechanics/web_mount.py#L114) | message |  |
+| [proxy](../harness/mechanics/web_mount.py#L137) | self, scope, receive, send, path |  |
+| [refuse](../harness/mechanics/web_mount.py#L166) | send, status |  |
 
 ### harness/mechanics/workspace_capabilities.py
 

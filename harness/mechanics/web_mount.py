@@ -30,7 +30,8 @@ class MountedApp:
     def text(self,text,origin=''):
         # Only the deployed URL prefixes change. No browser fetch implementation is replaced.
         text=text.replace(self.orders,origin+self.path('/orders')) if self.orders else text
-        text=re.sub(r'''(["'`(])(/(?:(?:api|static|auth|vendor|connection-brands|fonts|brand|assets|control-room)/|[A-Za-z0-9_-]+\.(?:css|js|mjs|woff2|woff|svg|png|jpg|webp)(?=[\"\'`)?#;\s]|$)))''',lambda m:m[1]+self.prefix+m[2],text)
+        text=re.sub(r'''(["'`(])(/(?:api|static|auth|vendor|connection-brands|fonts|brand|assets|control-room)/)''',lambda m:m[1]+self.prefix+m[2],text)
+        text=re.sub(r'''(["'`(])(/[^/\s"'`()?#]+\.(?:css|js|mjs|woff2|woff|svg|png|jpg|jpeg|webp)(?:\?[^\s"'`()#]*)?)''',lambda m:m[1]+self.prefix+m[2],text)
         if self.company:
             text=re.sub(r'''(["'`(])(/'''+re.escape(self.company)+r'''/)''',lambda m:m[1]+self.path('/orders')+m[2],text)
         if '<!doctype' in text.lower():
@@ -45,7 +46,8 @@ class MountedApp:
         if not isinstance(value,str):return value
         if self.orders and value.startswith(self.orders):return origin+self.path('/orders')+value[len(self.orders):]
         if self.company and value.startswith('/'+self.company+'/'):return self.path('/orders')+value
-        if value.startswith(('/api/','/static/','/auth/','/vendor/','/connection-brands/','/fonts/','/brand/','/assets/','/control-room/')) or re.fullmatch(r'/[A-Za-z0-9_-]+\.(?:css|js|mjs|woff2|woff|svg|png|jpg|webp)(?:[?#].*)?',value):return self.prefix+value
+        if value.startswith(('/api/','/static/','/auth/','/vendor/','/connection-brands/','/fonts/','/brand/','/assets/','/control-room/')):return self.prefix+value
+        if re.fullmatch(r'/[^/\s?#]+\.(?:css|js|mjs|woff2|woff|svg|png|jpg|jpeg|webp)(?:\?[^\s#]*)?',value):return self.prefix+value
         return value
     def unvalue(self,value,origin=''):
         if isinstance(value,dict):return {k:self.unvalue(v,origin) for k,v in value.items()}
