@@ -24,4 +24,4 @@ Run `python3 harness/run.py mcp_server --help` from the repository root for the 
 
 ## Evidence
 
-The public, local and managed MCP tests cover tool-surface parity, owner and collection binding, revoked membership, bounded results and retained admission across awaits. The [October 5 transport receipt](../../docs/HISTORICAL-RECORDS.md#record-7) records the earlier published tool set; a new release records its exact current tools and revocation proof. Deployments and origins are listed in [the deployment source](../../README.md#run-the-bare-workspace).
+The public, local and managed MCP tests cover tool-surface parity, owner and collection binding, revoked membership, bounded results and retained admission across awaits. The [October 5 transport receipt](../../docs/HISTORICAL-RECORDS.md#record-7) records the earlier published tool set; a new release records its exact current tools and revocation proof. Deployments and origins are listed in [the deployment source](https://github.com/latintzar/agent-workspace/blob/68f3c0d2486c1cc0bbae9cb88018859d2b10a599/README.md#run-the-bare-workspace).

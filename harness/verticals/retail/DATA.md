@@ -54,4 +54,4 @@ Source bytes and derivatives follow their commissioned service's retention. Prod
 
 ## Verification
 
-Source, storage, imported-media, observation, event-filter, script-wake and maintained-playback tests cover scope and provenance. Seed and processor tests prove repeatable derived values and location lease ownership. Broker and source-service receipts prove only their recorded source closure and operations. [Deployment](../../../README.md#run-the-bare-workspace) records the source revision actually served.
+Source, storage, imported-media, observation, event-filter, script-wake and maintained-playback tests cover scope and provenance. Seed and processor tests prove repeatable derived values and location lease ownership. Broker and source-service receipts prove only their recorded source closure and operations. [Deployment](https://github.com/latintzar/agent-workspace/blob/68f3c0d2486c1cc0bbae9cb88018859d2b10a599/README.md#run-the-bare-workspace) records the source revision actually served.

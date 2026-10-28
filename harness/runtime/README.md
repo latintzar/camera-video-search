@@ -35,7 +35,7 @@ Shared connection policy governs provider accounts and scope; [CONNECTIONS](../m
 
 [managed_policy.py](managed_policy.py) reserves the workspace's existing provider funds before starting or extending paid authority. Parent and children share a $1 turn allocation. The default `enforced` spending mode binds OpenAI’s session cap. Peter approved `ROCOTO_MANAGED_SPENDING_MODE=monitored` for the rollout on 13 October: token-based estimates and the original five-minute deadline trigger automatic cancellation, while charges can exceed the target. Approximate provider consumption retains its hold until a final attributable receipt settles it. [Cost safety](../../docs/COST-SAFETY.md) owns commissioning and account limits.
 
-The managed adapter has offline protocol, restart, authority, tool-effect, file and accounting proofs. A live managed run and publication are separate receipts. [Deployment](../../README.md#run-the-bare-workspace) records their state; [managed API commissioning](../../docs/HISTORICAL-RECORDS.md#record-4) owns the concrete proof procedure. Earlier app-server choices and deployment proofs are retained in [dated records](../../docs/HISTORICAL-RECORDS.md#record-21).
+The managed adapter has offline protocol, restart, authority, tool-effect, file and accounting proofs. A live managed run and publication are separate receipts. [Deployment](https://github.com/latintzar/agent-workspace/blob/68f3c0d2486c1cc0bbae9cb88018859d2b10a599/README.md#run-the-bare-workspace) records their state; [managed API commissioning](../../docs/HISTORICAL-RECORDS.md#record-4) owns the concrete proof procedure. Earlier app-server choices and deployment proofs are retained in [dated records](../../docs/HISTORICAL-RECORDS.md#record-21).
 
 ## Local adapter retirement
 

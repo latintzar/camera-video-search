@@ -39,7 +39,7 @@ Setup conversations use the shared private credential requests and clarification
 
 ## Product boundaries and verification
 
-The existing published retail service is `https://video-demo.soyrocoto.com`; [deployment](../../../README.md#run-the-bare-workspace) distinguishes that release from current source. The seeded demo uses preserved observations and generated history, labelled in its data. Live camera acquisition and provider delivery need their own commissioned service receipts.
+The existing published retail service is `https://video-demo.soyrocoto.com`; [deployment](https://github.com/latintzar/agent-workspace/blob/68f3c0d2486c1cc0bbae9cb88018859d2b10a599/README.md#run-the-bare-workspace) distinguishes that release from current source. The seeded demo uses preserved observations and generated history, labelled in its data. Live camera acquisition and provider delivery need their own commissioned service receipts.
 
 Retail tests cover exact event filters, source visibility, retained camera admission, scope changes during awaits, script incarnation and cancellation, location write leases, presentation deletion and the nine maintained outputs. Browser proofs exercise Home, canvases and camera evidence at desktop and phone sizes.
 

@@ -69,7 +69,7 @@ The shared page accepts `page_assets` from the selected host and mounts its decl
 4. Add displays and tabs through the shared SDK. Keep business vocabulary and resource access in the vertical.
 5. Start a fresh private state directory under `ROCOTO_VERTICAL=<id>` and prove membership, revocation, restart, declared effects and artifact selection.
 
-The loader, layer, tool-family, job-recipe, recipe-run, display and bare-startup tests are executable contracts. The bare deployment proof imports and starts the real backend while retail dependencies and files are unavailable. Use [the deployment runbook](../../README.md#run-the-bare-workspace) for local startup and the selected target's package builder.
+The loader, layer, tool-family, job-recipe, recipe-run, display and bare-startup tests are executable contracts. The bare deployment proof imports and starts the real backend while retail dependencies and files are unavailable. Use [the deployment runbook](https://github.com/latintzar/agent-workspace/blob/68f3c0d2486c1cc0bbae9cb88018859d2b10a599/README.md#run-the-bare-workspace) for local startup and the selected target's package builder.
 
 ## Manufacturer fit
 

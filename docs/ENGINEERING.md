@@ -1,6 +1,6 @@
 # Engineering workflow
 
-Use Python 3.12 and an isolated environment. Install `requirements-dev.txt`, select `ROCOTO_VERTICAL=bare` and keep fresh private state outside the checkout. [Local setup](../README.md#run-the-bare-workspace) opens the workspace; [OpenAI setup](OPENAI-SETUP.md) commissions paid execution.
+Use Python 3.12 and an isolated environment. Install `requirements-dev.txt`, select `ROCOTO_VERTICAL=bare` and keep fresh private state outside the checkout. [Local setup](https://github.com/latintzar/agent-workspace/blob/68f3c0d2486c1cc0bbae9cb88018859d2b10a599/README.md#run-the-bare-workspace) opens the workspace; [OpenAI setup](OPENAI-SETUP.md) commissions paid execution.
 
 ## Design choices
 
@@ -15,7 +15,7 @@ Use Python 3.12 and an isolated environment. Install `requirements-dev.txt`, sel
 
 ## Offline checks
 
-[The README command](../README.md#verify-locally) and [CI](../.github/workflows/offline.yml) run the same lean suite with local fake transports. The suite covers the SDK/layer boundary, portable bare artifact, managed protocol, sessions, turns, files, spending and explicit local allowance. CI actions are pinned to commits and receive read-only repository access.
+[The README command](https://github.com/latintzar/agent-workspace/blob/68f3c0d2486c1cc0bbae9cb88018859d2b10a599/README.md#verify-locally) and [CI](../.github/workflows/offline.yml) run the same lean suite with local fake transports. The suite covers the SDK/layer boundary, portable bare artifact, managed protocol, sessions, turns, files, spending and explicit local allowance. CI actions are pinned to commits and receive read-only repository access.
 
 Retail adds its own declared requirements. Original migration and cross-product suites also depend on their separate source closures. The [release record](../provenance/release-checks.json) names the two inherited broader-suite failures and records the original archive's Git-index skip. A separate fresh Git copy checks the selected files without changing the release candidate's history.
 

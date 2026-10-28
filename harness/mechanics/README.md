@@ -66,7 +66,7 @@ Access sessions, public MCP keys and managed-session MCP leases are distinct gra
 
 ## Self-description
 
-`get_harness` derives its vertical, declared roles, recipes, data sources, tool lists and capability facts from the installed manifest, sealed registry and current workspace services. The generated table in [README](../../README.md#existing-framework) is the shared currentness index. A capability's source proof and a host's publication receipt remain separate facts.
+`get_harness` derives its vertical, declared roles, recipes, data sources, tool lists and capability facts from the installed manifest, sealed registry and current workspace services. The generated table in [README](https://github.com/latintzar/agent-workspace/blob/68f3c0d2486c1cc0bbae9cb88018859d2b10a599/README.md#existing-framework) is the shared currentness index. A capability's source proof and a host's publication receipt remain separate facts.
 
 ## Questions and approvals
 
@@ -78,7 +78,7 @@ The shared page provides Organization, recent chats, files, agent classes, setti
 
 ## Takeover progress
 
-The takeover’s source work and publication acceptance are complete. Both public origins passed acceptance on managed release `99430164d577d95261eb7d07e1d8a0bb62ca495a`; `/healthz` exposes each current release. The hosted protocol proof, ordinary Organization turns and saved files pass; both pages pass browser acceptance at 1600 and 390 pixels. Retail retains all nine tiles and its canvas, and its transient weather failure recovered. An actual stock child completed `get_harness` through the deployed managed MCP door; Stop withdrew that access and left the root and child quiescent. The [rollout receipt](../../docs/HISTORICAL-RECORDS.md#record-15) records the live acceptance. CI passes for release `99430164`; the final release commit still requires CI and approval for the protected-main merge. [Deployment](../../README.md#run-the-bare-workspace) owns current host facts.
+The takeover’s source work and publication acceptance are complete. Both public origins passed acceptance on managed release `99430164d577d95261eb7d07e1d8a0bb62ca495a`; `/healthz` exposes each current release. The hosted protocol proof, ordinary Organization turns and saved files pass; both pages pass browser acceptance at 1600 and 390 pixels. Retail retains all nine tiles and its canvas, and its transient weather failure recovered. An actual stock child completed `get_harness` through the deployed managed MCP door; Stop withdrew that access and left the root and child quiescent. The [rollout receipt](../../docs/HISTORICAL-RECORDS.md#record-15) records the live acceptance. CI passes for release `99430164`; the final release commit still requires CI and approval for the protected-main merge. [Deployment](https://github.com/latintzar/agent-workspace/blob/68f3c0d2486c1cc0bbae9cb88018859d2b10a599/README.md#run-the-bare-workspace) owns current host facts.
 
 The dated builder history below records the order of verified source and host changes; the original handover and follow-up wording remain in [the frozen record](../../docs/HISTORICAL-RECORDS.md#record-26).
 

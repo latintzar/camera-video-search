@@ -6,7 +6,7 @@ The original Vitrina Harness keeps dated design notes, operator procedures and d
 
 | Task | Public guide |
 |---|---|
-| Start and sign in | [Local workspace](../README.md#run-the-bare-workspace) |
+| Start and sign in | [Local workspace](https://github.com/latintzar/agent-workspace/blob/68f3c0d2486c1cc0bbae9cb88018859d2b10a599/README.md#run-the-bare-workspace) |
 | Configure your own provider and public MCP origin | [OpenAI setup](OPENAI-SETUP.md) |
 | Follow current runtime, authority and approval paths | [Architecture](ARCHITECTURE.md), [MCP](../harness/mechanics/MCP.md) |
 | Change source and verify it | [Engineering](ENGINEERING.md), [SDK](../harness/sdk/README.md) |

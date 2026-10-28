@@ -28,4 +28,4 @@ The adapter reads location records and page projections produced by the current 
 
 A desktop view and a phone view use the same records. Camera playback, mask decoding and background polling are bounded by visibility. Closing or switching a surface releases its work. Long tile titles retain readable wrapping at phone widths.
 
-The UI proof covers the nine tiles, full canvases, source selection, period changes, current scope, agent navigation and participant controls. Media and byte-transfer proofs belong to [the data source](DATA.md) and [the maintained backend](../../../backend/realtime/README.md); publication receipts live under [deployment](../../../README.md#run-the-bare-workspace).
+The UI proof covers the nine tiles, full canvases, source selection, period changes, current scope, agent navigation and participant controls. Media and byte-transfer proofs belong to [the data source](DATA.md) and [the maintained backend](../../../backend/realtime/README.md); publication receipts live under [deployment](https://github.com/latintzar/agent-workspace/blob/68f3c0d2486c1cc0bbae9cb88018859d2b10a599/README.md#run-the-bare-workspace).

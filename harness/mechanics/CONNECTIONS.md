@@ -32,4 +32,4 @@ Output that belongs in a display uses the [display SDK](../sdk/TILES-AND-TABS.md
 
 ## Tests and operation
 
-Connection policy, native approval, managed connection, provider output, custom coordinator and HTTPS gateway tests exercise these boundaries using local stand-ins. [Deployment](../../README.md#run-the-bare-workspace) links the commissioning runbooks and receipts. [CHANNELS](CHANNELS.md) owns messages to people; [MCP](MCP.md) owns an external agent reading Rocoto.
+Connection policy, native approval, managed connection, provider output, custom coordinator and HTTPS gateway tests exercise these boundaries using local stand-ins. [Deployment](https://github.com/latintzar/agent-workspace/blob/68f3c0d2486c1cc0bbae9cb88018859d2b10a599/README.md#run-the-bare-workspace) links the commissioning runbooks and receipts. [CHANNELS](CHANNELS.md) owns messages to people; [MCP](MCP.md) owns an external agent reading Rocoto.
