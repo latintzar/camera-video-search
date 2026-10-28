@@ -12,4 +12,21 @@ jobs:
         with:
           python-version: 3.12
       - run: make install test
+      - name: Failed offline contract details
+        if: failure()
+        run: |
+          .venv/bin/python - <<'PY'
+          from pathlib import Path
+          import json,re
+          directory=Path('.local/verification')
+          checks=json.loads((directory/'checks.json').read_text())
+          for row in checks['suites']:
+              if not row['returncode']:
+                  continue
+              print('Failed suite:',row['suite'])
+              for line in (directory/(row['suite']+'.log')).read_text().splitlines()[-120:]:
+                  line=re.sub(r'"[^"\n]*"|\x27[^\x27\n]*\x27','<literal>',line)
+                  line=re.sub(r'\S{80,}','<long value>',line)
+                  print(line)
+          PY
       - run: node --check harness/verticals/retail/web/control-room/app.js
