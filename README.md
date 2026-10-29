@@ -2,6 +2,8 @@
 
 Video Search is a tool for searching and reviewing camera footage.
 
+[Website](https://atelierneyra.com/video) · [Open app](https://preview.atelierneyra.com/?project=video) · [Documentation](https://docs.atelierneyra.com/video/overview/)
+
 Its retail workspace connects source recordings, model observations and nine deterministic trackers.
 
 Originally **Rocoto Video**, built on the Vitrina Harness. This source beta includes the original retail interface, ingestion and indexing code, Cosmos adapters, source-scoped playback, observation admission, nine deterministic trackers and the shared agent workspace.
@@ -26,7 +28,6 @@ make dev
 Open **http://127.0.0.1:18530/control-room/#clip=retailaction-000027-rank0**. Read the private `~/.local/state/camera-video-search/owner-code.txt` file and enter its one-use code. The starter downloads a checksummed 119 MB sample, creates your own workspace and runs the original Python backend. The same code and sample power the hosted preview. The first view opens a recording from the latest completed trial. The Rocoto mark opens Home; choose **Annual** to see the retained historical period. [Sample contents and licences](docs/processed-sample.md).
 
 
-[Getting started](docs/get-started.md) · [Workflows](docs/workflows.md) · [Architecture](docs/video-architecture.md) · [Setup](docs/video-setup.md) · [Design decisions](docs/video-design.md) · [Function reference](docs/video-reference.md)
 
 ## Included work
 
