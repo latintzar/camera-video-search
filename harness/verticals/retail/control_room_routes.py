@@ -29,7 +29,7 @@ OUTLINE_VENDOR_ASSETS = frozenset(OUTLINE_VENDOR_ROOT + name for name in (
     'LICENSE', 'manifest.json',
 ))
 PRIVATE_VIEWER_CSP = (
-    "default-src 'self'; img-src 'self' data:; media-src 'self'; "
+    "default-src 'self'; img-src 'self' data: https://atelierneyra.com; media-src 'self'; "
     "script-src 'self'; worker-src 'self'; style-src 'self' 'unsafe-inline'; "
     "connect-src 'self'; frame-ancestors 'self'; base-uri 'none'; object-src 'none'"
 )
