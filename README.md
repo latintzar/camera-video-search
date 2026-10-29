@@ -2,7 +2,7 @@
 
 Video Search is a tool for searching and reviewing camera footage.
 
-[Website](https://atelierneyra.com/video) · [Open app](https://preview.atelierneyra.com/?project=video) · [Documentation](https://docs.atelierneyra.com/video/overview/)
+[Website](https://atelierneyra.com/video) · [Open app](https://preview.atelierneyra.com/apps/video/control-room/#clip=retailaction-000027-rank0) · [Documentation](https://docs.atelierneyra.com/video/overview/)
 
 Its retail workspace connects source recordings, model observations and nine deterministic trackers.
 
@@ -13,6 +13,20 @@ Originally **Rocoto Video**, built on the Vitrina Harness. This source beta incl
 RetailAction footage by Standard Cognition. [Source licence and attribution](docs/images/NOTICE).
 
 The starter opens the retained 45-recording retail sample, with its actual processing results, tracks and source licences.
+
+## How it works
+
+A recording contains hours of activity. A useful answer needs to point back to the exact clip and frame, and a business metric needs a consistent rule for which observations count.
+
+| Feature | What it does |
+| --- | --- |
+| Source recordings | Browse and play the retained camera recordings at the moment behind an observation. |
+| Cosmos processing | The source includes ingestion, indexing and model adapters for processing footage. |
+| Evidence review | Review observations, references and admission before using them in a tracker. |
+| Retail trackers | Nine deterministic trackers compute results from admitted observations. |
+| Agent integration | The original harness connects scoped tools, workspace records and retail interfaces. |
+
+The native preview opens the latest completed retained retail trial, with 45 recordings and the original processing results. The source includes the processing path; fresh model runs require an appropriate configured runtime and provider. Connect an owned camera dataset, commission processing and evaluate the observations against the business question. [Product guide](docs/PROJECT.md).
 
 ## Run the interface
 
