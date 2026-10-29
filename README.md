@@ -6,7 +6,7 @@ Its retail workspace connects source recordings, model observations and nine det
 
 Originally **Rocoto Video**, built on the Vitrina Harness. This source beta includes the original retail interface, ingestion and indexing code, Cosmos adapters, source-scoped playback, observation admission, nine deterministic trackers and the shared agent workspace.
 
-![The native camera player with the retained RetailAction recording](docs/images/home.png)
+![Video Search reviewing a RetailAction camera recording](docs/assets/readme-hero.png)
 
 RetailAction footage by Standard Cognition. [Source licence and attribution](docs/images/NOTICE).
 

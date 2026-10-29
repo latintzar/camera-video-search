@@ -12,7 +12,7 @@
     "LICENSE": "fbbd31cd652b5a98eea06d275bf845949a67301b85d7b03a823d1747aa35182f",
     "Makefile": "3f3151108e2a3b9fa5080d70b0dd7ba37d341ff18df2aa0e714fb633ea8011ee",
     "OWNERSHIP.md": "797db1f11b5dc95ab97bc4a718a59d9b29a7acb79d20593238be579c68b5ddac",
-    "README.md": "cef7ff7b289f465238d61a6600627df25cd6ed4afe1a485ef898750946f74a5b",
+    "README.md": "5790280bedd07d5f3d8ecf19d51c702a33e034d389a664edca794a04b3b2a42a",
     "THIRD_PARTY.md": "8367f1aa4051c46b819f75637bc588f17e5ec3e1a4031ff882bd08943d2f8fa8",
     "app/public/brand/rocoto-mark.svg": "5853eac27b281e7cba519cb82ae0e3005bab843cdf48345c49d1171a2f65c5e7",
     "app/public/connection-brands/axis.svg": "4a694c1331a73f664a7bd54c0ec069a751a016a281ddd5ff4c62b24bb107d265",
@@ -969,7 +969,7 @@
     "provenance/local-startup.json": "2c15e2e95b482f206296ad14056922e2cee11e1dff9b28e0d5334d96e971a005",
     "provenance/marketing-assets.json": "37744f89894574489faed8b38a2fe7e94c836a21b732d948a5f80b8f517abf7b",
     "provenance/release-checks.json": "0aa6cda052aa2d07f1335a09eb482214e4b3053bbaed1f24111a4b9bfbe38f8d",
-    "provenance/release-files.json": "2068f34cc531435a74326dc70dc9d5c41d9e516839159ee57671fe8d3e4b1392",
+    "provenance/release-files.json": "346cb447771576ea00a8b53d9648ea8c7e3e453cfe62e9cd498fc974edab42a4",
     "provenance/secret-scan-summary.json": "759c20a53a7edeee29643f077ca81f7eede94c5e2c4d63698d1893ee5dee55d6",
     "provenance/source-export.json": "6f3179b5be45f19d72dcdd5a61b7539de238121a538b17ae612b0a922298d01c",
     "pytest.ini": "bda7a909340b6a797bc194a64092d27dfda893f358597e668567d0e903e23f6e",
@@ -993,6 +993,7 @@
     "tools/seed.py": "d28e5b10571be832593e556c077bf64a2b987ca4e92ab2cb6fdad4e060bb1b62",
     "tools/serve.py": "29e786459deb50869d21faa4e7948b60e0b0eabab8029ca11c933c64b96ea534",
     "tools/source-map.py": "5bd48173f766dbb146ae54317d6d8d4419ed1f53e5297043de8dc9a83d7fa9dc",
-    "tools/verify.py": "73c7a289c1aaf465f772b5f099e3113b0996baa8e8a348af57d0413f9259d421"
+    "tools/verify.py": "73c7a289c1aaf465f772b5f099e3113b0996baa8e8a348af57d0413f9259d421",
+    "docs/assets/readme-hero.png": "3f364333d6bb3581a305acd8fdabd2fbda57a99e988d44740eab5b45eaf72777"
   }
 }
