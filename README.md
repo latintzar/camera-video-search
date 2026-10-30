@@ -1,14 +1,16 @@
-# Video Search
+# Video Intelligence
 
-Video Search is a tool for searching and reviewing camera footage.
+CCTV feeds with Cosmos-powered alerts for real-time business intelligence
 
-[Website](https://atelierneyra.com/video) · [Open app](https://preview.atelierneyra.com/apps/video/control-room/#clip=retailaction-000027-rank0) · [Documentation](https://docs.atelierneyra.com/video/overview/)
+Video Intelligence is a tool for searching and reviewing camera footage.
+
+[Website](https://atelierneyra.com/video) · [Open app](https://preview.atelierneyra.com/apps/video/control-room/#view=location) · [Documentation](https://docs.atelierneyra.com/video/overview/)
 
 Its retail workspace connects source recordings, model observations and nine deterministic trackers.
 
 Originally **Rocoto Video**, built on the Vitrina Harness. This source beta includes the original retail interface, ingestion and indexing code, Cosmos adapters, source-scoped playback, observation admission, nine deterministic trackers and the shared agent workspace.
 
-![Video Search reviewing a RetailAction camera recording](docs/assets/readme-hero.png)
+![Video Intelligence](https://atelierneyra.com/assets/product-shots-20261030/video.jpg)
 
 RetailAction footage by Standard Cognition. [Source licence and attribution](docs/images/NOTICE).
 
