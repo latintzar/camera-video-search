@@ -131,7 +131,11 @@ def test_preview_rechecks_chat_and_source_on_every_get(tmp_path, monkeypatch, ch
         else:
             app.state.index._raw.clips[0]['dataset'] = 'warehouse'
         response = client.get(url)
-        assert response.status_code == 404 and JPEG not in response.content
+        # Removing the final source withdraws the collection itself: the common
+        # scope admission rejects it before any preview lookup. Record changes
+        # inside an admitted collection remain non-disclosing missing resources.
+        expected = 403 if change == 'withdrawn_source' else 404
+        assert response.status_code == expected and JPEG not in response.content
         assert_private(response)
 
 

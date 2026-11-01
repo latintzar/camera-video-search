@@ -728,12 +728,12 @@ def create_app(state=DEFAULT_STATE, index=None, *, messaging_provider_factory=No
                 try:
                     await scope_stack.enter_async_context(selected['vertical'].request_scope(request))
                 except (ValueError, PermissionError):
-                    return JSONResponse({'error':'Refresh your current workspace access.'},headers={'Cache-Control':'private, no-store'},status_code=403)
+                    return JSONResponse({'error':'Refresh your current workspace access.'},headers={'Cache-Control':'private, no-store', 'X-Content-Type-Options':'nosniff', 'Referrer-Policy':'no-referrer'},status_code=403)
                 if not await permitted():
-                    return JSONResponse({'error':'Refresh your current workspace access.'},headers={'Cache-Control':'private, no-store'},status_code=403)
+                    return JSONResponse({'error':'Refresh your current workspace access.'},headers={'Cache-Control':'private, no-store', 'X-Content-Type-Options':'nosniff', 'Referrer-Policy':'no-referrer'},status_code=403)
                 result = await call_next(request)
             if not await permitted(resources=not scope_change):
-                return JSONResponse({'error':'Refresh your current workspace access.'},headers={'Cache-Control':'private, no-store'},status_code=403)
+                return JSONResponse({'error':'Refresh your current workspace access.'},headers={'Cache-Control':'private, no-store', 'X-Content-Type-Options':'nosniff', 'Referrer-Policy':'no-referrer'},status_code=403)
             original_body=result.body_iterator
             async def guarded_body():
                 async for chunk in original_body:
