@@ -18,6 +18,8 @@ jobs:
       - run: make install
       - run: .venv/bin/python -m pip check
       - run: make test
+      - name: Worker lifecycle regression
+        run: .venv/bin/python -m unittest discover -s tools/tests -v
       - name: Retained processed sample and real HTTP backend
         run: |
           .venv/bin/python tools/check-processed-sample.py

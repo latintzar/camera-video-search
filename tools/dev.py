@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Serve the original video workspace with retained processing and recipient-owned state."""
 from pathlib import Path
-import argparse,json,os,socket,ipaddress,subprocess,sys
+import argparse,json,os,socket,ipaddress,sys
 ROOT=Path(__file__).resolve().parents[1]
 def main():
  parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--state',type=Path,default=Path.home()/'.local/state/camera-video-search');parser.add_argument('--port',type=int,default=18530);parser.add_argument('--sample-dir',type=Path,help='Verified processed sample directory for an offline installation');parser.add_argument('--public-preview',action='store_true',help='Serve the sample through native read-only observer access');parser.add_argument('--prefix',default='',help='Mount below this URL path');parser.add_argument('--public-origin',default='',help='Exact HTTPS origin for a public preview');parser.add_argument('--worker',action='store_true',help=argparse.SUPPRESS);args=parser.parse_args()
@@ -14,7 +14,8 @@ def main():
   env.update(ROCOTO_VERTICAL='retail',ROCOTO_RETAIL_LOCATION_CONTEXT='off',ROCOTO_RETAIL_REALTIME_READS='legacy',ROCOTO_BROWSE_SESSIONS='0',ROCOTO_TILE_RUNNER='off',ROCOTO_TILE_SCRIPT_EVENT_RUNS='off',ROCOTO_CUSTOM_EXECUTOR_ENABLED='0',ROCOTO_OPERATOR_ID='owner',ROCOTO_OPERATOR_NAME='Owner')
   command=[sys.executable,str(Path(__file__).resolve()),'--worker','--state',str(args.state),'--port',str(args.port),'--sample-dir',str(sample),'--prefix',args.prefix,'--public-origin',args.public_origin]
   if args.public_preview:command.append('--public-preview')
-  return subprocess.call(command,cwd=ROOT,env=env)
+  os.chdir(ROOT)
+  os.execvpe(sys.executable,command,env)
  blocked=[0];audit=[None]
  def record_attempt():
   blocked[0]+=1
