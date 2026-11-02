@@ -29,3 +29,20 @@ def test_empty_provider_workspace_is_denied_before_approval_file_read(tmp_path):
  from compute_guard import validate_approval,ApprovalError
  with pytest.raises(ApprovalError,match='own Modal workspace'):
   validate_approval(tmp_path/'absent.json',workspace='',planned_gross_usd='1.50')
+
+
+def test_authenticated_control_room_keeps_strict_policy_and_admits_navigation_images(tmp_path,monkeypatch):
+ from fastapi.testclient import TestClient
+ monkeypatch.setenv('ROCOTO_VERTICAL','retail')
+ monkeypatch.setenv('ROCOTO_RETAIL_LOCATION_CONTEXT','off')
+ monkeypatch.setenv('ROCOTO_RETAIL_REALTIME_READS','legacy')
+ monkeypatch.setenv('ROCOTO_TILE_RUNNER','off')
+ import server
+ state=tmp_path/'viewer';seed.seed(state)
+ with TestClient(server.create_app(state)) as client:
+  code=(state/'owner-code.txt').read_text().strip()
+  assert client.post('/api/session',json={'code':code},headers={'X-Rocoto-Page':'1'}).status_code==200
+  page=client.get('/control-room/')
+  assert page.status_code==200 and 'native-nav/atelier-nav.js' in page.text
+  assert page.headers['content-security-policy']=="default-src 'self'; img-src 'self' data: https://atelierneyra.com https://demo.soyrocoto.com; media-src 'self'; script-src 'self'; worker-src 'self'; style-src 'self' 'unsafe-inline'; connect-src 'self'; frame-ancestors 'self'; base-uri 'none'; object-src 'none'"
+  assert 'https://demo.soyrocoto.com' not in client.get('/api/session').headers['content-security-policy']
