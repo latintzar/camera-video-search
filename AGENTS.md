@@ -1,8 +1,8 @@
-# Video operations
+# Video Intelligence engineering
 
-Read README.md, docs/get-started.md and docs/video-status.md first. Preserve the native interface, source hierarchy and exact observation/worker/provider contracts.
+Read README.md, docs/product-tour.md, docs/get-started.md and docs/video-status.md first. Preserve the native interface, source hierarchy and exact observation/worker/provider contracts.
 
-Use the included authored fixture for the first result. Keep supplied annotations distinct from model output, recordings distinct from live acquisition, and estimates distinct from till transactions. Read docs/video-reference.md when changing a module.
+Start with the retained 45-recording sample selected by `make dev`. The small authored fixture in `examples/` supports protocol checks. Keep supplied annotations distinct from model output, recordings distinct from live acquisition, and estimates distinct from till transactions. Read docs/video-reference.md when changing a module.
 
 Choose the recipient account and private state before provider configuration. tools/configure.py keeps values outside source; tools/dev.py clears ambient provider context and blocks outside networking. Preserve ownership, approval, budget, source-hash, clock and publication gates.
 

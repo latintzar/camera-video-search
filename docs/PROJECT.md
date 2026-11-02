@@ -1,6 +1,8 @@
-# Cosmos-based search and review for camera footage
+# Video Intelligence
 
-Video Search is a Cosmos-based app for searching camera footage. Open a recording, inspect the model’s observations against the actual frames, and build retail trackers from admitted evidence. It includes the original ingestion, processing and agent-workspace integration.
+Video Intelligence is a Cosmos-powered CCTV app for real-time business intelligence and automatic alerts. A dashboard brings events and business metrics together; each event links to the source footage for review on desktop or mobile.
+
+[Product tour](product-tour.md) follows the location dashboard into trackers, footage and source-linked evidence. The source retains ingestion, indexing, Cosmos adapters and the shared agent harness.
 
 A recording contains hours of activity. A useful answer needs to point back to the exact clip and frame, and a business metric needs a consistent rule for which observations count.
 

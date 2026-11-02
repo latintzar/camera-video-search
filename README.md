@@ -2,33 +2,37 @@
 
 CCTV feeds with Cosmos-powered alerts for real-time business intelligence
 
-Video Intelligence is a tool for searching and reviewing camera footage.
+Video Intelligence is a Cosmos-powered CCTV app for real-time business intelligence and automatic alerts. A dashboard brings events and business metrics together; each event links to the source footage for review on desktop or mobile.
 
-[Website](https://atelierneyra.com/video) · [Open app](https://preview.atelierneyra.com/apps/video/control-room/#view=location) · [Documentation](https://docs.atelierneyra.com/video/overview/)
+[Website](https://atelierneyra.com/video) · [Open demo](https://preview.atelierneyra.com/apps/video/control-room/#view=location&period=year) · [Product tour](docs/product-tour.md) · [Documentation](https://docs.atelierneyra.com/video/overview/)
 
-Its retail workspace connects source recordings, model observations and nine deterministic trackers.
-
-Originally **Rocoto Video**, built on the Vitrina Harness. This source beta includes the original retail interface, ingestion and indexing code, Cosmos adapters, source-scoped playback, observation admission, nine deterministic trackers and the shared agent workspace.
-
-![Video Intelligence](https://atelierneyra.com/assets/product-motion-v5/video-bfd81a0d96af.jpg)
+[![Video Intelligence retail dashboard beside mobile source-video and visitor review](https://atelierneyra.com/assets/product-motion-v5/video-bfd81a0d96af.jpg)](https://preview.atelierneyra.com/apps/video/control-room/#view=location&period=year)
 
 RetailAction footage by Standard Cognition. [Source licence and attribution](docs/images/NOTICE).
 
 The starter opens the retained 45-recording retail sample, with its actual processing results, tracks and source licences.
 
-## How it works
+## From a business metric to the camera
 
-A recording contains hours of activity. A useful answer needs to point back to the exact clip and frame, and a business metric needs a consistent rule for which observations count.
+1. **Open Home → Annual.** See the retained location dashboard and its historical period.
+2. **Open a tracker.** Follow a summary into its detailed history or individual occurrences.
+3. **Choose View footage.** Play the relevant recording and inspect its camera-local visitor chapters, frames and evidence.
+4. **Inspect the follow-up.** Queue watch, Empty shelf watch and Shop summary define recurring agent work over admitted events; activation uses your inputs, budget and delivery setup.
 
-| Feature | What it does |
+## Product areas
+
+| Area | What it does |
 | --- | --- |
-| Source recordings | Browse and play the retained camera recordings at the moment behind an observation. |
-| Cosmos processing | The source includes ingestion, indexing and model adapters for processing footage. |
-| Evidence review | Review observations, references and admission before using them in a tracker. |
-| Retail trackers | Nine deterministic trackers compute results from admitted observations. |
-| Agent integration | The original harness connects scoped tools, workspace records and retail interfaces. |
+| Dashboard | Connect business summaries to the detailed tracker behind each number. |
+| Nine retail trackers | Follow visitors, product interactions, pickups, returns, baskets, queues, shelves, sales and conversion. |
+| Video review | Inspect the recording interval and source evidence behind an event. |
+| Cosmos processing | Ingest and index recordings, retrieve useful intervals and inspect selected clips. |
+| Evidence admission | Validate source identity, clocks, profiles and labels before computing maintained metrics. |
+| Agents and alerts | Define queue/shelf watches and a periodic shop summary from committed observations. |
 
-The native preview opens the latest completed retained retail trial, with 45 recordings and the original processing results. The source includes the processing path; fresh model runs require an appropriate configured runtime and provider. Connect an owned camera dataset, commission processing and evaluate the observations against the business question. [Product guide](docs/PROJECT.md).
+The demo uses the retained 45-recording trial, with model answers, publisher references and generated history labelled separately. The alert jobs are inactive definitions; connect and test your own cameras, processing and delivery to continue the live workflow.
+
+[Product tour](docs/product-tour.md) follows the dashboard experience and maps its modules. [Implementation and trial evidence](docs/implementation.md) retains the processing results, tracker layers and exact acceptance boundaries.
 
 ## Run the interface
 
@@ -41,39 +45,15 @@ make install
 make dev
 ```
 
-Open **http://127.0.0.1:18530/control-room/#clip=retailaction-000027-rank0**. Read the private `~/.local/state/camera-video-search/owner-code.txt` file and enter its one-use code. The starter downloads a checksummed 119 MB sample, creates your own workspace and runs the original Python backend. The same code and sample power the hosted preview. The first view opens a recording from the latest completed trial. The Rocoto mark opens Home; choose **Annual** to see the retained historical period. [Sample contents and licences](docs/processed-sample.md).
+Open **http://127.0.0.1:18530/control-room/#view=location&period=year**. Read the private `~/.local/state/camera-video-search/owner-code.txt` file and enter its one-use code. The starter downloads a checksummed 119 MB sample, creates your own workspace and runs the original Python backend. The same code and sample power the hosted preview. Home opens the retained historical period; open a tracker, then choose **View footage** for its source. The Rocoto mark returns to Home. [Sample contents and licences](docs/processed-sample.md).
 
 
-[Getting started](docs/get-started.md) · [Workflows](docs/workflows.md) · [Architecture](docs/video-architecture.md) · [Setup](docs/video-setup.md) · [Design decisions](docs/video-design.md) · [Function reference](docs/video-reference.md)
+[Product tour](docs/product-tour.md) · [Getting started](docs/get-started.md) · [Workflows](docs/workflows.md) · [Architecture](docs/video-architecture.md) · [Setup](docs/video-setup.md) · [Design decisions](docs/video-design.md) · [Function reference](docs/video-reference.md)
 
-## Included work
+## Implementation and licence
 
-| Layer | Implementation | Evidence |
-| --- | --- | --- |
-| Interface | Home, tracker canvases, camera player, visitor chapters, onboarding and workspace | Original UI over the retained processed sample |
-| Sources | Resumable upload, link/folder/SFTP intake, immutable versions, preparation and worker readiness | Offline protocol tests; connected services have separate commissioning |
-| Semantic index | Cosmos Embed on H100, exported CPU text tower, persistent Qdrant generations | Original executed trials and retained code; current release checks use local fixtures/fake transports |
-| Detailed inspection | Selected-clip Cosmos inspection, caching, evidence derivation and bounded compute | Original paid trials; fresh provider acceptance remains separate |
-| Observations and trackers | Clock/identity admission, provenance, baskets, nine core processors, typed tile/canvas output | Retained model answers, publisher references, generated history and source tests |
-| Shared workspace | Accounts, conversations, agents, recipes, tools, permissions and spending | Included Vitrina Harness implementation; managed execution uses a recipient OpenAI project |
+[Implementation and retained evidence](docs/implementation.md) · [Trial status](docs/video-status.md) · [Agent setup skill](.agents/skills/video-operations-setup/SKILL.md)
 
-The sample preserves nine recordings with archived model answers, including four views from the latest completed trial. That trial produced 17 quarantined observations. Publisher annotations and generated business history retain their own provenance. [Sample guide](docs/processed-sample.md) · [Status and historical trials](docs/video-status.md).
-
-## Original launch artwork
-
-![Original launch illustration](docs/images/original-illustration.webp)
-
-Fictional, AI-generated launch scenes. [Artwork provenance](provenance/marketing-assets.json).
-
-## Continue the work
-
-```sh
-make test
-python tools/source-map.py
-```
-
-Each guide links the actual implementation and records its boundary. The [agent setup skill](.agents/skills/video-operations-setup/SKILL.md) follows the same path. Keep recipient credentials and state outside source through [the configuration helper](docs/video-setup.md).
-
-Original code and authored fixtures use [MIT](LICENSE). Vendored libraries, fonts, model weights and marks retain their [own terms](THIRD_PARTY.md). The downloadable retail sample carries the Standard.AI Dataset License and CC BY-SA 4.0 separately; its full terms and attribution travel with the files.
+Original code and authored fixtures use [MIT](LICENSE). Libraries, fonts, models and marks retain their [own terms](THIRD_PARTY.md). The sample’s Standard.AI and CC BY-SA 4.0 terms and attribution travel with its files; see [sample licences](docs/processed-sample.md#source-licences).
 
 [made by atelier neyra](https://atelierneyra.com)
